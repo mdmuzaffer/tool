@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>D</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+
+  <body>
+    <div style="width: 100%;">
+	
+      <h4 class="w3-center w3-margin pHeading" style="">Employee Details</h4>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Employee Name</label>
+          <input name="ctl00$ContentPlaceHolder1$emp_name" type="text" id="emp_name" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+
+        <div class="w3-half">
+          <label class="labelAll" style="">Initial Or Short Name</label>
+          <input name="ctl00$ContentPlaceHolder1$tchInitial_txt" type="text" id="tchInitial_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Blood Group</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$blood_group_dropdown" id="blood_group_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">---Select---</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Date Of Birth</label>
+          <input name="ctl00$ContentPlaceHolder1$datebirth_txt" type="text" id="datebirth_txt" class="w3-input w3-border datepicker dob6 EdlCommInp hasDatepicker"><span class="ui-datepicker-append">DD/MM/YY</span>
+        </div>
+
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Gender</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$gender_dropdown" id="gender_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="----Select Gender----">----Select Gender----</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Differently abled</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$Differently_dropdown" id="Differently_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">-----Select Differently-----</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Caste</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$caste_dropdown" id="caste_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">--Select Caste--</option>
+                <option value="General">General</option>
+                <option value="OBC-A">OBC-A</option>
+                <option value="OBC-B">OBC-B</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="Other">Other</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">State details</label>
+          <input name="ctl00$ContentPlaceHolder1$Differently_txt" type="text" id="Differently_txt" tabindex="7" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Religion</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$religion_dropdown" id="religion_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">----Select Religion----</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Christian">Christian</option>
+                <option value="Jain">Jain</option>
+                <option value="Buddhist">Buddhist</option>
+                <option value="Shikh">Shikh</option>
+                <option value="Others">Others</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Identification Mark</label>
+          <input name="ctl00$ContentPlaceHolder1$Identification_mrk_txt" type="text" id="Identification_mrk_txt" tabindex="7" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Aadhaar Number</label>
+          <input name="ctl00$ContentPlaceHolder1$adhar_number_txt" type="text" id="adhar_number_txt" tabindex="6" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Father's Name</label>
+          <input name="ctl00$ContentPlaceHolder1$father_txt" type="text" id="father_txt" tabindex="8" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">EPIC</label>
+          <input name="ctl00$ContentPlaceHolder1$epic_txt" type="text" id="epic_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Mother's Name</label>
+          <input name="ctl00$ContentPlaceHolder1$mothername_txt" type="text" id="mothername_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Assembly Constituency No</label>
+          <input name="ctl00$ContentPlaceHolder1$Assembly_cons_txt" type="text" id="Assembly_cons_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Contact No</label>
+          <input name="ctl00$ContentPlaceHolder1$contact_txt" type="text" id="contact_txt" tabindex="10" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Assembly Part No</label>
+          <input name="ctl00$ContentPlaceHolder1$Assembly_prt_no_txt" type="text" id="Assembly_prt_no_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Permanent Address</label>
+          <input name="ctl00$ContentPlaceHolder1$address_txt" type="text" id="address_txt" tabindex="9" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Voter sl.No. in the part</label>
+          <input name="ctl00$ContentPlaceHolder1$Voter_sl_no_txt" type="text" id="Voter_sl_no_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Present Address</label>
+          <input name="ctl00$ContentPlaceHolder1$present_add_txt" type="text" id="present_add_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Mother Tongue</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$mothertongdropdown" id="mothertongdropdown" class="w3-select search_categories EdlCommInp">
+                <option value="Bengali">Bengali</option>
+                <option value="Assamese">Assamese</option>
+                <option value="Hindi">Hindi</option>
+                <option value="English">English</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Manipuri">Manipuri</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Nepali">Nepali</option>
+                <option value="Bhoti">Bhoti</option>
+                <option value="Oriya">Oriya</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Sanskrit">Sanskrit</option>
+                <option value="Sindhi">Sindhi</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Other languages">Other languages</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Marital Status</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$marital_dropdown" id="marital_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">-----Select Marital-----</option>
+                <option value="Married">Married</option>
+                <option value="Un-Married">Un-Married</option>
+                <option value="Widow">Widow</option>
+                <option value="Widower">Widower</option>
+                <option value="Divorcee">Divorcee</option>
+                <option value="Separate">Separate</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Residential Status</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$resident_sts_dropdown" id="resident_sts_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">---Select---</option>
+                <option value="Govt. Housing">Govt. Housing</option>
+                <option value="Private Rental">Private Rental</option>
+                <option value="Own House">Own House</option>
+                <option value="Spouse House">Spouse House</option>
+                <option value="Relative House">Relative House</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Spouse Name</label>
+          <input name="ctl00$ContentPlaceHolder1$spouse_txt" type="text" id="spouse_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Housing Scheme Name</label>
+          <input name="ctl00$ContentPlaceHolder1$houseingscheme_txt" type="text" id="houseingscheme_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">spouse is employed</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$spouseemplyed_dropdown" id="spouseemplyed_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">---Select---</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Whether any Court Case</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$Hascorecase_dropdown" id="Hascorecase_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Spouse pay</label>
+          <input name="ctl00$ContentPlaceHolder1$Spouse_pay_txt" type="text" id="Spouse_pay_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Case No</label>
+          <input name="ctl00$ContentPlaceHolder1$Caseno_txt" type="text" id="Caseno_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Spouse HRA</label>
+          <input name="ctl00$ContentPlaceHolder1$Spouse_hra_txt" type="text" id="Spouse_hra_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Year</label>
+          <input name="ctl00$ContentPlaceHolder1$Caseyear_txt" type="text" id="Caseyear_txt" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">
+            Spouse opted for enrolment in West Bengal Health Scheme</label>
+          <div class="search_categories w3-select w3-border">
+            <div class="select">
+              <select name="ctl00$ContentPlaceHolder1$Spouse_optd_dropdown" id="Spouse_optd_dropdown" class="w3-select search_categories EdlCommInp">
+                <option value="-1">---Select---</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label class="labelAll" style="">Related with</label>
+          <input name="ctl00$ContentPlaceHolder1$Case_relate_txt" type="text" id="Case_relate_txt" class="w3-input w3-border EdlCommInp inputAll">
+
+        </div>
+        <div class="w3-half">
+          <label class="labelAll" style="">Height</label>
+          <input name="ctl00$ContentPlaceHolder1$height_txt" type="text" id="height_txt" tabindex="7" class="w3-input w3-border EdlCommInp inputAll">
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <h4 class="w3-center w3-margin pHeading" style="">Qualification Details</h4>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Qualification</label>
+            <input name="ctl00$ContentPlaceHolder1$qualificationtxt" type="text" id="qualificationtxt" tabindex="12" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Specialist for Classes</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$spacilistclassdropdown" id="spacilistclassdropdown" tabindex="16" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select For Class---- </option>
+                  <option value="I-IV">I-IV</option>
+                  <option value="V-VIII">V-VIII</option>
+                  <option value="IX-X">IX-X</option>
+                  <option value="XI-XII">XI-XII</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Qualification Type</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$qualificationtypedropdown" id="qualificationtypedropdown" tabindex="13" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">-----Select Qualification Type-----</option>
+                  <option value="PH.D.">PH.D.</option>
+                  <option value="M.PHIL">M.PHIL</option>
+                  <option value="POST GRADUATE">POST GRADUATE</option>
+                  <option value="HONS GRADUATE">HONS GRADUATE</option>
+                  <option value="GRADUATE">GRADUATE</option>
+                  <option value="HIGHER SECONDARY">HIGHER SECONDARY</option>
+                  <option value="SECONDARY">SECONDARY</option>
+                  <option value="BELOW SECONDARY">BELOW SECONDARY</option>
+                  <option value="OTHERS">OTHERS</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Appointed Through SSC</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$sscdropdown" id="sscdropdown" tabindex="17" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">---Select SSC---</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Professional Qualification</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$teachertypedropdown" id="teachertypedropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">---Select---</option>
+                  <option value="BT">BT</option>
+                  <option value="B.Ed">B.Ed</option>
+                  <option value="PGBT">PGBT</option>
+                  <option value="BPEd">BPEd</option>
+                  <option value="MPEd">MPEd</option>
+                  <option value="Special B.Ed">Special B.Ed</option>
+                  <option value="Others">Others</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Subject Group</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$subjectgroupdropdown" id="subjectgroupdropdown" tabindex="18" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">-------Select Subject Group--------</option>
+                  <option value="LANGUAGE">LANGUAGE</option>
+                  <option value="SCIENCE &amp; MATH">SCIENCE &amp; MATH</option>
+                  <option value="SOCIAL SCIENCE">SOCIAL SCIENCE</option>
+                  <option value="WORK &amp; PHY. EDUCATION">WORK &amp; PHY. EDUCATION</option>
+                  <option value="HS SECTION">HS SECTION</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Year of possessing</label>
+            <input name="ctl00$ContentPlaceHolder1$professional_passing_txt" type="text" id="professional_passing_txt" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Teaching Subject</label>
+            <select id="Subject_listcombo_dropdown" multiple="multiple" tabindex="-1" name="example-basic" size="5" class=" chosenfull EdlCommInp inputAll" style="display: none;">
+              <option value="BENGALI">BENGALI</option>
+              <option value="COMPUTER">COMPUTER</option>
+              <option value="ENGLISH">ENGLISH</option>
+              <option value="ENVIRONMENT AND GEOGRAPHY">ENVIRONMENT AND GEOGRAPHY</option>
+              <option value="ENVIRONMENT AND HISTORY">ENVIRONMENT AND HISTORY</option>
+              <option value="ENVIRONMENT AND SCIENCE">ENVIRONMENT AND SCIENCE</option>
+              <option value="EVS">EVS</option>
+              <option value="GENERAL SCIENCE">GENERAL SCIENCE</option>
+              <option value="GEOGRAPHY">GEOGRAPHY</option>
+              <option value="HISTORY">HISTORY</option>
+              <option value="LIFE SCIENCE">LIFE SCIENCE</option>
+              <option value="MATHEMATICS">MATHEMATICS</option>
+              <option value="PARIBESH PARICHITI">PARIBESH PARICHITI</option>
+              <option value="PHYSICAL EDUCATION">PHYSICAL EDUCATION</option>
+              <option value="PHYSICAL SCIENCE">PHYSICAL SCIENCE</option>
+              <option value="SANSKRIT/ARABIC">SANSKRIT/ARABIC</option>
+              <option value="WORK EDUCATION">WORK EDUCATION</option>
+              <option value="Bengali(A)">Bengali(A)</option>
+              <option value="English(A)">English(A)</option>
+              <option value="Hindi(A)">Hindi(A)</option>
+              <option value="Nepali(A)">Nepali(A)</option>
+              <option value="Urdu">Urdu</option>
+              <option value="SANTALI">SANTALI</option>
+              <option value="ORIYA">ORIYA</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Gujrati">Gujrati</option>
+              <option value="Punjabi">Punjabi</option>
+              <option value="English(B)">English(B)</option>
+              <option value="Bengali(B)">Bengali(B)</option>
+              <option value="Hindi(B)">Hindi(B)</option>
+              <option value="Nepali(B)">Nepali(B)</option>
+              <option value="Alternative Enqtish">Alternative Enqtish</option>
+              <option value="Accountancy">Accountancy</option>
+              <option value="Costing and Taxation">Costing and Taxation</option>
+              <option value="Business Studies">Business Studies</option>
+              <option value="Commercial Law and Preliminaries of Auditing">Commercial Law and Preliminaries of Auditing</option>
+              <option value="Physics">Physics</option>
+              <option value="Statistics">Statistics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Biological Sciences">Biological Sciences</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Environmental Studies">Environmental Studies</option>
+              <option value="Nutrition">Nutrition</option>
+              <option value="Education">Education</option>
+              <option value="Geography">Geography</option>
+              <option value="Home Management and Family Resource Management">Home Management and Family Resource Management</option>
+              <option value="Economics">Economics</option>
+              <option value="Journalism &amp; Mass Communication">Journalism &amp; Mass Communication</option>
+              <option value="Sanskrit">Sanskrit</option>
+              <option value="Persian">Persian</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Psychology">Psychology</option>
+              <option value="Anthropology">Anthropology</option>
+              <option value="Agronomy">Agronomy</option>
+              <option value="History">History</option>
+              <option value="Political Science">Political Science</option>
+              <option value="Modern Computer Application">Modern Computer Application</option>
+              <option value="Health &amp; Physical Education">Health &amp; Physical Education</option>
+              <option value="Music">Music</option>
+              <option value="Philosophy">Philosophy</option>
+              <option value="Sociology">Sociology</option>
+            </select>
+            <div class="chosen-container chosen-container-multi" style="width:  ;" title="" id="Subject_listcombo_dropdown_chosen">
+              <ul class="chosen-choices">
+                <li class="search-field"><input type="text" value="Select Some Options" class="default" autocomplete="off" style="width: 166px;" tabindex="19"></li>
+              </ul>
+              <div class="chosen-drop">
+                <ul class="chosen-results"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Stream</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$stramdropdown" id="stramdropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">-----Select Stream-----</option>
+                  <option value="Arts">Arts</option>
+                  <option value="Commerce">Commerce</option>
+                  <option value="Science">Science</option>
+                  <option value="Vocational">Vocational</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Home Science">Home Science</option>
+                  <option value="Others">Others</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Subject name</label>
+            <input name="ctl00$ContentPlaceHolder1$subjectname_txt" type="text" id="subjectname_txt" tabindex="12" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <h4 class="w3-center w3-margin pHeading" style="">Salary Details</h4>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Date Of Joining</label>
+            <input name="ctl00$ContentPlaceHolder1$joindatetxt" type="text" id="joindatetxt" class="w3-input w3-border datepicker dob6 EdlCommInp hasDatepicker"><span class="ui-datepicker-append">DD/MM/YY</span>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">PAN</label>
+            <input name="ctl00$ContentPlaceHolder1$pan_notxt" type="text" id="pan_notxt" tabindex="23" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Date Of Retirement</label>
+            <input name="ctl00$ContentPlaceHolder1$retirement_dt_txt" type="text" id="retirement_dt_txt" class="w3-input w3-border datepicker dob6 EdlCommInp">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Name of Pay Band</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$Name_of_pay_dropdown" id="Name_of_pay_dropdown" class="w3-select search_categories EdlCommInp">
+
+                  <option value="-1">---Select PayBand---</option>
+                  <option value="PB-1">PB-1</option>
+                  <option value="PB-2">PB-2</option>
+                  <option value="PB-3">PB-3</option>
+                  <option value="PB-4">PB-4</option>
+                  <option value="PB-5">PB-5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Approval of Appointment Number . &amp; Date</label>
+            <input name="ctl00$ContentPlaceHolder1$approvaltxt" type="text" id="approvaltxt" tabindex="21" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Grade Pay</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$gradepay_dropdownLIST" id="gradepay_dropdownLIST" class="w3-select search_categories EdlCommInp">
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">
+              Memo No/ DI'S PP Memo No (for temporary post)</label>
+            <input name="ctl00$ContentPlaceHolder1$Memo_temp" type="text" id="Memo_temp" tabindex="21" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Pay Band Scale</label>
+            <input name="ctl00$ContentPlaceHolder1$paybandscaltxt" type="text" id="paybandscaltxt" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Designation</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$designation_dropdown" id="designation_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">------Select Designation------</option>
+                  <option value="HM">HM</option>
+                  <option value="TIC">TIC</option>
+                  <option value="AHM">AHM</option>
+                  <option value="AT">AT</option>
+                  <option value="Librarian">Librarian</option>
+                  <option value="clerk">clerk</option>
+                  <option value="Gr.D">Gr.D</option>
+                  <option value="Para Teacher">Para Teacher</option>
+                  <option value="CONTRACTUAL">CONTRACTUAL</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Basic As On <span id="BasicAsOnDateSpan">11/05/2020</span></label>
+            <input name="ctl00$ContentPlaceHolder1$basiccurrentdatetxt" type="text" id="basiccurrentdatetxt" disabled="disabled" tabindex="26" class="aspNetDisabled w3-input w3-border EdlCommInp inputAll">
+            <span class="" style="display: block; font-size: 0.75em;" id="BasicCalcDetailsSpan"></span>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Employee Group</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$employee_group_drop" id="employee_group_drop" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">------Select Group------</option>
+                  <option value="Gr-A">Gr-A</option>
+                  <option value="Gr-B">Gr-B</option>
+                  <option value="Gr-C">Gr-C</option>
+                  <option value="Gr-D">Gr-D</option>
+                  <option value="Others">Others</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Pay In Pay Band As On <span id="BandPayAsOnDateSpan">11/05/2020</span></label>
+            <input name="ctl00$ContentPlaceHolder1$bandpay_txt" type="text" id="bandpay_txt" disabled="disabled" class="aspNetDisabled w3-input w3-border EdlCommInp inputAll">
+            <span class="" style="display: block; font-size: 0.75em;" id="BandPayCalcDetailsSpan"></span>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Vacancy Status</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$Vacancy_dropdown" id="Vacancy_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">------Select------</option>
+                  <option value="Permanent">Permanent</option>
+                  <option value="Temporary">Temporary</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <div class="w3-col l10">
+              <label class="labelAll" style="">PF Balance on Current Date</label>
+              <input name="ctl00$ContentPlaceHolder1$PF_balance_current_date_txt" type="text" readonly="readonly" id="PF_balance_current_date_txt" disabled="disabled" tabindex="27" class="aspNetDisabled w3-input w3-border EdlCommInp inputAll">
+              <span class="" style="display: block; font-size: 0.75em;" id="PFBalOnCurrDateDetailsSpan"></span>
+            </div>
+            <div class="w3-col l2">
+              <label class="labelAll" style="">&nbsp;&nbsp;&nbsp;</label>
+              <input type="button" class="w3-btn" style="width: unset !important; margin: 0px 15px;" id="LoadPFBalBtn" value="Load">
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Service Type</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$servicetype_dropdown" id="servicetype_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="GOI">GOI</option>
+                  <option value="GoWB">GoWB</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Salary A/c No</label>
+            <input name="ctl00$ContentPlaceHolder1$salary_ac_txt" type="text" id="salary_ac_txt" tabindex="28" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Post Status :</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$poststatus_dropdown" id="poststatus_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="Additional">Additional</option>
+                  <option value="Permanent">Permanent</option>
+                  <option value="Up gradation">Up gradation</option>
+                  <option value="New setup">New setup</option>
+                  <option value="LIEN VACANCY">LIEN VACANCY</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Salary Payee Bank</label>
+            <input name="ctl00$ContentPlaceHolder1$salary_payee_bank_txt" type="text" id="salary_payee_bank_txt" tabindex="29" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Salary Source</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$salarysource_dropdown" id="salarysource_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="NON-SSA SCHOOL">NON-SSA SCHOOL</option>
+                  <option value="NON-SSA MADRASAH">NON-SSA MADRASAH</option>
+                  <option value="SSA SCHOOL">SSA SCHOOL</option>
+                  <option value="SSA MADRASAH">SSA MADRASAH</option>
+                  <option value="NEW SETUP">NEW SETUP</option>
+                  <option value="CONTRACTUAL">CONTRACTUAL</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Bank Branch Name (With Code)</label>
+            <input name="ctl00$ContentPlaceHolder1$bank_name_withcode_txt" type="text" id="bank_name_withcode_txt" tabindex="30" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Opted Under DCRB Scheme</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$DCRB_dropdown" id="DCRB_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">IFSC Code</label>
+            <input name="ctl00$ContentPlaceHolder1$ifcs_code_txt" type="text" id="ifcs_code_txt" tabindex="31" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Option Exercise Under (If Yes)</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$Exercise_dropdown" id="Exercise_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="a. Pension Scheme existing prior to 01.04.1981">a. Pension Scheme existing prior to 01.04.1981</option>
+                  <option value=" b. CPF with Gratuity"> b. CPF with Gratuity</option>
+                  <option value=" c. Pension, Family Pension GPF with Gratuity"> c. Pension, Family Pension GPF with Gratuity</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">MICR Code</label>
+            <input name="ctl00$ContentPlaceHolder1$micr_code_txt" type="text" id="micr_code_txt" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">If opted under post 1981 pension</label>
+            <div class="search_categories w3-select w3-border">
+              <div class="select">
+                <select name="ctl00$ContentPlaceHolder1$PostPension_dropdown" id="PostPension_dropdown" class="w3-select search_categories EdlCommInp">
+                  <option value="-1">----Select----</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Medical Leave On Current Date</label>
+            <input name="ctl00$ContentPlaceHolder1$medical_leave_txt" type="text" id="medical_leave_txt" tabindex="32" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="labelAll" style="">Date of Next Increment</label>
+            <input name="ctl00$ContentPlaceHolder1$date_nxt_incre_txt" type="text" id="date_nxt_incre_txt" tabindex="32" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+          <div class="w3-half">
+            <label class="labelAll" style="">Amount of Increment</label>
+            <input name="ctl00$ContentPlaceHolder1$Amount_incre_txt" type="text" id="Amount_incre_txt" tabindex="32" class="w3-input w3-border EdlCommInp inputAll">
+          </div>
+        </div>
+        <div class="w3-center">
+          <a class="w3-btn" style="" id="datasave">Save</a>
+          <a class="w3-btn alternative" style="" id="cancelbtn">Cancel</a>
+        </div>
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$emp_id_hid" id="emp_id_hid" value="">
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$image_source_hid" id="image_source_hid" value="">
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$flag_grdpay" id="flag_grdpay" value="false">
+      </div>
+
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,156 @@
+<script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "320px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+</script>
+<script src="/th/pub/front/js/jquery-2.2.3.min.js"></script>
+<script src="/th/pub/front/js/JiSlider.js"></script>
+<script>
+    $(window).load(function () {
+        $('#JiSlider').JiSlider({
+            color: '#fff',
+            start: 1,
+            reverse: false
+        }).addClass('ff');
+    })
+
+</script>
+<script src="/th/pub/front/js/main.js"></script>
+<script src="/th/pub/front/js/move-top.js"></script>
+<script src="/th/pub/front/js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
+        });
+    });
+
+</script>
+<script>
+    function validate() {
+        if (document.myForm.name.value == "") {
+            alert("Please Provide Your Name!");
+            document.myForm.name.focus();
+            return false;
+        }
+        var x = document.myForm.email.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+            alert("Please enter a valid e-mail address");
+            return false;
+        }
+        if (document.myForm.mobile.value.length != '10' || document.myForm.mobile.value == "" || isNaN(document.myForm
+                .mobile.value)) {
+            alert("Please provide CORRECT Contact Number.");
+            document.myForm.mobile.focus();
+            return false;
+        }
+        if (document.myForm.ro_status.value == "") {
+            alert("Please provide RO Status!");
+            document.myForm.ro_status.focus();
+            return false;
+        }
+        if (document.myForm.query_for.value == "") {
+            alert("Please provide Query For!");
+            document.myForm.query_for.focus();
+            return false;
+        }
+        if (document.myForm.brand.value == "") {
+            alert("Please provide Brand Name!");
+            document.myForm.brand.focus();
+            return false;
+        }
+        if (document.myForm.address.value == "") {
+            alert("Please Provide Your Full Address!");
+            document.myForm.address.focus();
+            return false;
+        }
+        if (document.myForm.state.value == "") {
+            alert("Please provide State!");
+            document.myForm.state.focus();
+            return false;
+        }
+        if (document.myForm.city.value == "") {
+            alert("Please provide City!");
+            document.myForm.city.focus();
+            return false;
+        }
+        return true;
+    }
+
+</script>
+<script type="text/javascript">
+    function call_subcat(id) {
+        var id = id;
+        $.ajax({
+            type: "POST",
+            url: "state_city_ajax.php",
+            data: {
+                ipd: id,
+            },
+            success: function (data) {
+                var idx = data;
+                document.getElementById('city').innerHTML = idx;
+            }
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    function call_subcat2(id) {
+        var id = id;
+        $.ajax({
+            type: "POST",
+            url: "state_city_ajax.php",
+            data: {
+                ipd: id,
+            },
+            success: function (data) {
+                var idx = data;
+                document.getElementById('city2').innerHTML = idx;
+            }
+        });
+    }
+
+</script>
+<script>
+    function checkDate2() {
+        var d1 = document.getElementById("v_date").value;
+        var d2 = document.getElementById("hidden_crnt_date2").value;
+        if (d1 < d2) {
+            alert("Visit Date Must be Either Tomorrow or Today");
+            document.getElementById('v_date').value = document.getElementById("hidden_crnt_date2").value;
+        } else {}
+    }
+
+</script>
+<script>
+    function checkDate() {
+        var d1 = document.getElementById("f_date").value;
+        var d2 = document.getElementById("hidden_crnt_date").value;
+        if (d1 < d2) {
+            alert("Visit Date Must be Either Tomorrow or Today");
+            document.getElementById('f_date').value = document.getElementById("hidden_crnt_date").value;
+        } else {}
+    }
+
+</script>
+<script>
+    $(document).ready(function () {
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+    });
+
+</script>
+<script src="/th/pub/front/js/SmoothScroll.min.js"></script>
+<script src="/th/pub/front/js/bootstrap.js"></script>

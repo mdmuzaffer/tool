@@ -1,0 +1,84 @@
+.dSwitch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    transform: scale(0.85);
+}
+
+.dSwitch input {
+    display: none;
+}
+
+.dSwitch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ca2222;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.dSwitch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.dSwitch input:checked + .slider {
+    background-color: #2ab934;
+}
+
+.dSwitch input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+.dSwitch input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.dSwitch .on {
+    display: none;
+}
+
+.dSwitch .on,
+.dSwitch .off {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+.dSwitch input:checked + .slider .on {
+    display: block;
+}
+
+.dSwitch input:checked + .slider .off {
+    display: none;
+}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.dSwitch .slider.round {
+    border-radius: 34px;
+}
+
+.dSwitch .slider.round:before {
+    border-radius: 50%;
+}

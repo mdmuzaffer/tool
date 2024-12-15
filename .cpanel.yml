@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/o508f069s49r/.bin/rps/git
+    - /bin/cp -R . $DEPLOYPATH
+    - composer install
+    - php artisan migrate
+    - php artisan storage:link
+    

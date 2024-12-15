@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+
+@import url(bs4.min.css?v=0.0);
+@import url(custom.01.app.css?v=i73982+10);
+@import url(custom.02.app.css?v=i73493+10);
+
+
+
+
+
+
+
+
+
+
+
+.bg-danger-light {
+    background-color: rgba(227, 52, 47, 0.35) !important;
+}
+
+.bg-success-light {
+    background-color: rgba(56, 193, 114, 0.46) !important;
+}
+
+
+.table-fit-to-content th,
+.table-fit-to-content td,
+.fit-to-content {
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+
+.disabled-control {
+    opacity: 0.6;
+    pointer-events: none;
+    user-select: none;
+}
+
+a.card,
+a.card:hover
+{
+    text-decoration: none;
+}

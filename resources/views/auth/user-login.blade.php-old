@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="j_idt4">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/theme.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/layout.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/fa/font-awesome.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/font-awesome.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/grid-css.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/eff-common.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/flexslider.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('newAssets/checkpost/faces/javax.faces.resource/components.css') }}">
+
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jquery/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jquery/jquery-plugins.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/core.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/components.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jsf.js') }}"></script>
+    <script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
+    <title>RTO Login</title>
+    <link rel="icon" href="{{ asset('newAssets/checkpost/faces/vahan-icon.png') }}" sizes="16x16" type="image/png" />
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/commonvalidation.js') }}"></script>
+    <script type="text/javascript" language="javascript">
+
+        $(document).ready(function() {
+            $('.no-copy-paste').on("cut copy paste", function(e) {
+                e.preventDefault();
+            });
+        });
+
+    </script>
+    <link rel="icon" href="{{ asset('newAssets/checkpost/faces/vahan-icon.png') }}" sizes="16x16" type="image/png" />
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/login.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/md5.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/sha256.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jquery.marquee.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jquery.flexslider-min.js') }}"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "fade",
+                slideshowSpeed: 7000,
+                animationSpeed: 800,
+                controlNav: false,
+                directionNav: false,
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+</head><body>
+
+    <div class="container-fluid topbar-menu">
+        <div class="mar-bot">
+            <div>
+                <div class="row">
+                    <div class="col-md-6 left-position">
+                        <div class="marquee marquee-top mar-common-f">
+                            <div>
+                                <span>Please pay tax in advance to avoid any last minute hassle.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 right-position top-pad-top">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- <nav class="navbar navbar-default navigation-background hide-header" role="navigation">
+        <div class="ui-grid ui-grid-responsive">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2 left_logo">
+                    <a class="top-space inline-section"><img id="j_idt39" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/checkpost-logo.png') }}" alt="Check Post Logo" />
+                    </a>
+                </div>
+                <div class="ui-grid-col-8">
+                    <div class="heading_w center-position top-space"><img id="j_idt41" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/emblem-logo.png')}}" class="emblem-logo" alt="State Emblem of India" />
+                        <div class="font-bold text-welcome-heading welcome-heading-size text-uppercase">ministry of road transport and highways</div>
+                        <div class="font-bold text-welcome-heading welcome-sub-heading-size">Government of India</div>
+                    </div>
+                </div>
+                <div class="ui-grid-col-2 right_logo">
+                    <a class="top-space inline-section"><img id="j_idt43" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/e-vahan-logo.png') }}" alt="e-Vahan Logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>-->
+    <nav class=" navbar-default navigation-background" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navigation-background-nav" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#"> <span class="glyphicon glyphicon-home"></span> Home </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" rendered=""><span class="glyphicon glyphicon-user"></span> Border Tax Payment<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Tax Payment</a>
+                        </li>
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Check Pending Transaction</a>
+                        </li>
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Reverify Failed Transaction </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" rendered=""><span class="glyphicon glyphicon-print"></span> Reports<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Print Payment Receipt</a>
+                        </li>
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Print Permit Receipt</a>
+                        </li>
+                        <li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Check Receipt Details</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--                        &lt;li&gt;
+                                            &lt;h:link value="" title="" outcome="/public/usermanuals/UserManuals.xhtml"&gt; &lt;span class="glyphicon glyphicon-eye-open"&gt;&lt;/span&gt; User Manuals&lt;/h:link&gt;
+                                        &lt;/li&gt;-->
+                <!--                        &lt;li&gt;
+                                            &lt;h:link value="" title="" outcome="/public/contactus/Contactus.xhtml"&gt; &lt;span class="glyphicon glyphicon-phone-alt"&gt;&lt;/span&gt; Contact Us &lt;/h:link&gt;
+                                        &lt;/li&gt;-->
+            </ul>
+        </div>
+    </nav>
+    <div class="main_news_w">
+        <div class="news_w">
+            <div data-direction="left" class="marquee-with-options">
+                <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" direction="left" behavior="alternate">
+                    Verify the validity of the receipt by sending sms <font color="#ff83dc">VAHAN &lt;STATE CODE&gt; CP &lt;VEHICLE NO&gt; </font> to 7738299899 (e.g. <font color="#ff83dc">VAHAN XX CP XXXXXXXXXX</font>)
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <div class="main_news_w2">
+        <div class="news_w">
+            <div data-direction="left" class="marquee-with-options">
+                <marquee scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" direction="left" behavior="alternate">
+                    <font size="4" color="#ff0f0f">Select the service name carefully in case you select wrong service and pay the fee/tax, amount will not be refunded or adjusted.</font>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <div><div id="popup" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container center-position"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="popup_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="popup_content"><div id="j_idt69" class="ui-messages ui-widget" aria-live="polite"></div><button id="j_idt71" name="j_idt71" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){mojarra.ab('j_idt71',event,'click',0,'loginPanel popup')},function(event){PrimeFaces.ab({s:&quot;j_idt71&quot;,f:&quot;master_Layout_form&quot;,onco:function(xhr,status,args){PF('dlg1').hide();;}});return false;}]);" type="submit"><span class="ui-button-text ui-c">Ok</span></button><script id="j_idt71_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt71",{id:"j_idt71",behaviors:{click:function(ext,event) {mojarra.ab('j_idt71',event,'click',0,'loginPanel popup',{'CLIENT_BEHAVIOR_RENDERING_MODE':'UNOBSTRUSIVE'})}}});});</script></div></div><script id="popup_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dlg1",{id:"popup",draggable:false,modal:true});});</script><div id="j_idt72" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt72_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="j_idt72_content"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt74" name="j_idt74" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span class="ui-button-text ui-c">Yes</span></button><script id="j_idt74_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt74",{id:"j_idt74"});});</script><button id="j_idt75" name="j_idt75" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-close"></span><span class="ui-button-text ui-c">No</span></button><script id="j_idt75_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt75",{id:"j_idt75"});});</script></div></div><script id="j_idt72_s" type="text/javascript">$(function(){PrimeFaces.cw("ConfirmDialog","widget_j_idt72",{id:"j_idt72",showEffect:"fade",hideEffect:"explode",global:true});});</script>
+        <div data-direction="left" class="marquee-with-fast-options"><div id="j_idt77" class="ui-outputpanel ui-widget">
+                <div class="red h4"></div></div>
+        </div>
+        <div class="container-fluid">
+            <div class="container1">
+                <div id="main">
+                    <div class="ui-grid-row center-position" id="skip-main-content">
+                        <div class="ui-grid-col-12"><img src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/NewImage.gif') }}"><font style="color:#FF0000!important;font-size:15pt!important;">Other state passenger vehicle shall not be allowed to enter into Odisha till further order, even if the vehicle has a valid permit</font>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row center-position" id="skip-main-content">
+                        <div class="ui-grid-col-12 ">
+                            <h1 class="header-main ">The Solution for Vehicle Tax Collection at Checkpost</h1>
+                        </div>
+                    </div>
+                    <!--                    &lt;p:outputPanel rendered="# {!loginBean.allowConn}"&gt;
+                                            &lt;div class="ui-grid-row"&gt;
+                                                &lt;div class="ui-grid-col-12 center-position"&gt;
+                                                    &lt;div class="red h1 bottom-space"&gt;VAHAN Service Portal is down for Maintenance.&lt;/div&gt;
+                                                    &lt;div class=" red h3"&gt;Please try after some time.123&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/p:outputPanel&gt;-->
+                    <div class="ui-grid-row ui-grid-responsive">
+                        <div class="ui-grid-col-3">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-11">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading "><span class="glyphicon glyphicon-th-list"></span>Important information...</div>
+                                        <div class="panel-body">
+                                            <div class="news_h">
+                                                <ul class="demo2">
+                                                    <li class="news-item">Process to pay other state road tax of single vehicle..<br /><a id="j_idt82" href="#" class="ui-commandlink ui-widget" onclick="PF('process1').show();;PrimeFaces.ab({s:&quot;j_idt82&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+                                                    <li class="news-item">Process to check your pending transaction of single vehicle..<br /><a id="j_idt89" href="#" class="ui-commandlink ui-widget" onclick="PF('process2').show();;PrimeFaces.ab({s:&quot;j_idt89&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+
+                                                    <li class="news-item">Process to recheck the fail transaction of single vehicle..<br /><a id="j_idt92" href="#" class="ui-commandlink ui-widget" onclick="PF('process3').show();;PrimeFaces.ab({s:&quot;j_idt92&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+                                                    <li class="news-item">Process to signup for tax payment of more then one vehicle in single transaction..<br /><a id="j_idt95" href="#" class="ui-commandlink ui-widget" onclick="PF('process4').show();;PrimeFaces.ab({s:&quot;j_idt95&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+                                                    <li class="news-item">Process to pay other state road tax of more then one vehicle..<br /><a id="j_idt98" href="#" class="ui-commandlink ui-widget" onclick="PF('process5').show();;PrimeFaces.ab({s:&quot;j_idt98&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+                                                    <li class="news-item">Process to Generate Memo and pay fee of ODC..<br /><a id="j_idt101" href="#" class="ui-commandlink ui-widget" onclick="PF('process6').show();;PrimeFaces.ab({s:&quot;j_idt101&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                            more...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-col-5 left-rbox scrollbar">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12">
+                                    <p>
+                                        <span>CHECKPOST</span> <font style="font-size: 11pt;"> portal is meant to be a common platform from where various checkpost services are provided to citizens, as and when they are developed by the department. These services are being started for online checkpost tax payment of vehicles. The owners of these vehicles can access to the portal from any internet access point, and deposit their due taxes through net banking facility. This system will save them the trouble of physically coming to the transport office, while the department will be able to collect their taxes in a cashless and seamless way.
+                                            Once the user logs on to the system and provides the required information about the vehicle, the software calculates and displays the tax amount payable. If the user accepts to make the payment, the portal redirects him to selected bank or treasury site. The user then makes the payment from his bank account through secure Internet Banking. Once the transaction is complete, the software generates a detailed receipt, which can be printed by the user for his records. For checking the authenticity of receipt, the transport department officials will be able to cross-check the payment details by logging on to the portal using this web-based software. They can also view / print various reports which will be generated for officials of the transport department.</font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="loginformid" class="ui-grid-col-4 ">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12  ">
+                                <form name="form1" role="form" method="POST" action="{{route('user.login.submit')}}"  id="form1">
+                                    @csrf
+                                    <div class="login-form text-center">
+                                        <div class="heading-login">
+                                            <h2>Authenticated Login</h2>
+                                        </div>
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        @endif
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user "></i>
+                                                </span>
+                                                <input name="email" id="UserName"  type="text" value="{{ old('email') }}" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all form-control no-copy-paste" autocomplete="off" placeholder="User Name" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+                                                </span>
+                                                <input name="password" id="txtPassword" type="password" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all form-control no-copy-paste" autocomplete="off" placeholder="Password" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="ui-grid-row">
+                                                <div class="ui-grid-col-12 center-position">
+                                                    <button id="btnisValidate" type="submit" name="btnisValidate" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn btn-primary btn-block btn-login" type="submit">
+                                                        <span class="ui-button-icon-left ui-icon ui-c ui-icon-unlocked"></span><span class="ui-button-text ui-c">Submit</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="bot-underline"></div>
+                <div class="container-fluid">
+                    <div class="container1">
+                        <div class="row">
+                            <div class="col-md-11 col-lg-11 col-sm-11 center-position ">
+                                <ul class="ch-grid">
+                                    <li>
+                                        <div class="ch-item ch-img-1">
+                                            <div class="ch-info-wrap">
+                                                <div class="ch-info">
+                                                    <div class="ch-info-front ch-img-1"></div>
+                                                    <div class="ch-info-back"><a href="#"><h3>Tax Payment</h3></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="ch-item ch-img-3">
+                                            <div class="ch-info-wrap">
+                                                <div class="ch-info">
+                                                    <div class="ch-info-front ch-img-3"></div>
+                                                    <div class="ch-info-back"><a href="#"><h3>Print Payment Receipt</h3></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ch-item ch-img-2">
+                                            <div class="ch-info-wrap">
+                                                <div class="ch-info">
+                                                    <div class="ch-info-front ch-img-2"></div>
+                                                    <div class="ch-info-back"><a href="#"><h3>Check Pending Transaction</h3></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ch-item ch-img-4">
+                                            <div class="ch-info-wrap">
+                                                <div class="ch-info">
+                                                    <div class="ch-info-front ch-img-4"></div>
+                                                    <div class="ch-info-back"><a href="#"><h3>Check Receipt Details</h3></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ch-item ch-img-5">
+                                            <div class="ch-info-wrap">
+                                                <div class="ch-info">
+                                                    <div class="ch-info-front ch-img-5"></div>
+                                                    <div class="ch-info-back"><a href="#"><h3>Reverify Failed Transaction</h3></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <div id="footer_view"><html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt149"><link type="text/css" rel="stylesheet" href="#" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/fa/font-awesome.css?ln=primefaces&amp;v=7.0" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script></head><body>
+                    <div class="footer-news-bg top-space">
+                        <div class="news_w">
+                            <div data-direction="left" class="marquee-with-options">
+                                <marquee scrollamount="2" speed="10" onmouseover="this.stop();" onmouseout="this.start();" direction="left" behavior="alternate">
+                                    Please pay tax in advance to avoid any last minute hassle.
+                                </marquee>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid ui-grid-responsive vahan-footer-section">
+                        <div class="ui-grid-row ">
+                            <div class="ui-grid-col-10 ">
+                                <div class="ui-grid-row">
+                                    <div class="ui-grid-col-12 center-position footer-t">
+                                        Powered by National Informatics Centre. All Rights Reserved.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-grid-col-2">
+                                <div class="ui-grid-row  left-position ">
+                                    <div class="ui-grid-col-12  "><img id="j_idt152" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/nic-logo.png?ln=images')}}" alt="Parivahan Sewa" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></body>
+                    </html>
+                </div>
+            </div>
+        </div><script type="text/javascript" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/jquery.bootstrap.newsbox.min.js?ln=side-js') }}"></script>
+        <script type="text/javascript">
+            $(function () {
+                $(".demo2").bootstrapNews({
+                    newsPerPage: 5,
+                    autoplay: true,
+                    pauseOnHover: true,
+                    navigation: false,
+                    direction: 'down',
+                    newsTickerInterval: 2500,
+                    onToDo: function () {
+                        //console.log(this);
+                    }
+                });
+            });
+        </script><div id="payment_dialog1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog1_title" class="ui-dialog-title">Process of paying road tax for other state...</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog1_content">
+                <ol>
+                    <li>  Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
+                    <li>  Select the state where you want to go from <font class="dialog-highlight-text">'Select State'</font> drop down menu.</li><br />
+                    <li>  Select service name from <font class="dialog-highlight-text">'Service Name'</font> drop down menu.</li><br />
+                    <li>  Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li><br />
+                    <li>  Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
+                    <li>  Fill rest of the fields which are not filled automatically.</li><br />
+                    <li>  In case fields are not filled automatically then enter the details manually.</li><br />
+                    <li>  Click <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax according to state notification.</li><br />
+                    <li>  Click <font class="dialog-highlight-text">'Pay Tax'</font> button to pay the calculated tax.</li><br />
+                    <li>  It opens the payment gateway of VAHAN.</li><br />
+                    <li>  Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li><br />
+                    <li>  And then follow the screen to pay tax.</li><br />
+                    <li>  After paying tax bank will redirect to the Checkpost application.</li><br />
+                    <li>  In case your transaction is Success it will show the successful receipt.</li><br />
+                    <li>  In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li><br />
+                    <li>  Print the receipt.</li>
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt161" name="j_idt161" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process1').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt161&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button><script id="j_idt161_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt161",{id:"j_idt161"});});</script>
+                    </div>
+                </div></div></div><script id="payment_dialog1_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process1",{id:"payment_dialog1",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script><div id="payment_dialog2" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog2_title" class="ui-dialog-title">Process to check your pending transaction of single vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog2_content">
+                <ol>
+                    <li>  Select the <font class="dialog-highlight-text">'Check Pending Transaction'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
+                    <li>  It will show <font class="dialog-highlight-text">'Check Pending Transaction'</font> screen.</li><br />
+                    <li>  Enter Vehicle No. and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
+                    <li>  Click the button available in <font class="dialog-highlight-text">'Check Status'</font> column of below table.</li><br />
+                    <li>  It will print the receipt according to the status sent by bank.</li><br />
+                    <li>  In case your transaction is Success it will show the successful receipt.</li><br />
+                    <li>  In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li>
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt165" name="j_idt165" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process2').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt165&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button><script id="j_idt165_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt165",{id:"j_idt165"});});</script>
+                    </div>
+                </div></div></div><script id="payment_dialog2_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process2",{id:"payment_dialog2",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script><div id="payment_dialog3" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog3_title" class="ui-dialog-title">Process to recheck the fail transaction of single vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog3_content">
+                <ol>
+                    <li>  Select the <font class="dialog-highlight-text">'Reverify Fail Transaction'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
+                    <li>  It will show <font class="dialog-highlight-text">'Reverify Fail Transaction'</font> screen.</li><br />
+                    <li>  Choose desired state from <font class="dialog-highlight-text">'From State Name'</font> combo box for which you have done the payment.</li><br />
+                    <li>  Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details of the vehicle.</li><br />
+                    <li>  Choose the correct <font class="dialog-highlight-text">'Payment id'</font> click the button available in <font class="dialog-highlight-text">'Reverify'</font> column of below table.</li><br />
+                    <li>  It will print the receipt according to the status sent by bank.</li><br />
+                    <li>  In case your transaction is Success it will show the successful receipt.</li><br />
+                    <li>  In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li>
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt168" name="j_idt168" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process3').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt168&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button><script id="j_idt168_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt168",{id:"j_idt168"});});</script>
+                    </div>
+                </div></div></div><script id="payment_dialog3_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process3",{id:"payment_dialog3",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script><div id="payment_dialog4" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog4_title" class="ui-dialog-title">Process to signup for tax payment of more then one vehicle in single transaction..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog4_content">
+                <ol>
+                    <li>  Click link shown in login box as <font class="dialog-highlight-text">'Signup here'</font> </li><br />
+                    <li>  It will open User Registration form to create user.</li><br />
+                    <li>  Select state name where you belongs to.</li><br />
+                    <li>  Enter desired <font class="dialog-highlight-text">'User id.'</font></li><br />
+                    <li>  Fill all data with correct <font class="dialog-highlight-text">'Mobile No.'</font> to get OTP, without OTP you are unable to register.</li><br />
+                    <li>  Click on <font class="dialog-highlight-text">'Generate OTP'</font> button to get OTP on mobile.</li><br />
+                    <li>  Enter <font class="dialog-highlight-text">'OTP'</font> and desired <font class="dialog-highlight-text">'Password'</font>.</li><br />
+                    <li>  Enter captcha shown on the box.</li><br />
+                    <li>  Click <font class="dialog-highlight-text">'Save'</font> button to create user id.</li><br />
+                    <li>  It will open message box that shows <font class="dialog-highlight-text">'User ID'</font>.</li><br />
+                    <li>  Please note down your <font class="dialog-highlight-text">'User ID'</font> to login.</li><br />
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt171" name="j_idt171" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process4').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt171&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button><script id="j_idt171_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt171",{id:"j_idt171"});});</script>
+                    </div>
+                </div></div></div><script id="payment_dialog4_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process4",{id:"payment_dialog4",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script><div id="payment_dialog5" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog5_title" class="ui-dialog-title">Process to pay other state road tax of more then one vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog5_content">
+                <ol>
+                    <li>  Enter <font class="dialog-highlight-text">'User ID'</font> and <font class="dialog-highlight-text">'Password'</font> generated with <font class="dialog-highlight-text">'Signup here'</font> link.</li><br />
+                    <li>  Enter captcha as shown in the image.</li><br />
+                    <li>  Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Select Menu'</font> drop down menu.</li><br />
+                    <li>  Select service Name from <font class="dialog-highlight-text">'Service Name'</font> drop down menu.</li><br />
+                    <li>  Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li><br />
+                    <li>  Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
+                    <li>  Fill rest of the fields which are not filled automatically.</li><br />
+                    <li>  In case fields are not filled automatically then enter the details manually.</li><br />
+                    <li>  Click on <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax according to state notification.</li><br />
+                    <li>  Click on <font class="dialog-highlight-text">'Add to Cart'</font> button.</li><br />
+                    <li>  If you want to pay tax for more than one vehicle follow the steps from 6 to 10.</li><br />
+                    <li>  If you have added all the vehicles(for which you want to make payment) to the cart then click on <font class="dialog-highlight-text">'Pay Tax'</font> button to pay tax.</li><br />
+                    <li>  It opens the payment gateway of VAHAN.</li><br />
+                    <li>  Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li><br />
+                    <li>  And then follow the screen to pay tax.</li><br />
+                    <li>  After paying tax bank will redirect to the Checkpost application.</li><br />
+                    <li>  In case your transaction is Success it will show the successful receipt.</li><br />
+                    <li>  In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li><br />
+                    <li>  Print the receipt.</li>
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt175" name="j_idt175" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process5').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt175&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button><script id="j_idt175_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt175",{id:"j_idt175"});});</script>
+                    </div>
+                </div></div></div><script id="payment_dialog5_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process5",{id:"payment_dialog5",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script><div id="payment_dialog6" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog6_title" class="ui-dialog-title">Process to Generate Memo and pay fee of ODC..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="payment_dialog6_content">
+                <ol>
+                    <li>Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li>
+                    <li>Select the state where you want to go from 'Select State' drop down menu.</li>
+                    <li>Select service name from <font class="dialog-highlight-text">'Service Name'</font> as <font class="dialog-highlight-text">'ADVANCE PAYMENT OF ODC EXEMPTION FEE'</font> from drop down menu.</li>
+                    <li>Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li>
+                    <li>Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li>
+                    <!--                &lt;li&gt;Fill rest of the fields which are not filled automatically.&lt;/li&gt;-->
+                    <li>In case fields are not filled automatically then enter the details manually.</li>
+                    <li>In case nature of goods of your vehicle is <font class="dialog-highlight-text">'INDIVISIBLE'</font> then first generate memo. And you have two options.
+                        <ol>
+                            <li type="A">You can pay the fee at the same time by clicking on <font class="dialog-highlight-text">'Pay Fee'</font> button.
+                                <ol>
+                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">VAHAN</font>.</li>
+                                    <li type="i">Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li>
+                                    <li type="i">And then follow the screen to Pay Fee.</li>
+                                    <li type="i">After paying fee bank will redirect to the Checkpost application.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success</font> it will show the successful receipt.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail</font> it will show the failure message. Now you can again initiate the payment.</li>
+                                    <li type="i">Print the Memo receipt.</li>
+                                    <li type="i">Print the Fees receipt.</li>
+                                </ol>
+                            </li>
+                            <li type="A">Or if you want to make payment later then note down your memo no and follow below steps
+                                <ol>
+                                    <li type="i">Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li>
+                                    <li type="i">Select the state where you want to go from <font class="dialog-highlight-text">'Select State'</font> drop down menu.</li>
+                                    <li type="i">Select service name from <font class="dialog-highlight-text">'Service Name'</font> as <font class="dialog-highlight-text">'PAYMENT OF PENDING ODC EXEMPTION FEE'</font> from drop down menu.</li>
+                                    <li type="i">Type the Memo no in text field.</li>
+                                    <li type="i">Click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li>
+                                    <li type="i">Click <font class="dialog-highlight-text">'Pay Fee'</font> button to pay the calculated Fee.</li>
+                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">VAHAN</font>.</li>
+                                    <li type="i">Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li>
+                                    <li type="i">And then follow the screen to Pay Fee.</li>
+                                    <li type="i">After paying fee bank will redirect to the Checkpost application.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success</font> it will show the successful receipt.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail</font> it will show the failure message. Now you can again initiate the payment.</li>
+                                    <li type="i">Print the Fee receipt.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+                <div class="ui-grid-row top-space bottom-space">
+                    <div class="ui-grid-col-12 center-position"><button id="j_idt180" name="j_idt180" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process6').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt180&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button>
+                        <script id="j_idt180_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt180",{id:"j_idt180"});});</script>
+                    </div>
+                </div></div></div>
+        <script id="payment_dialog6_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process6",{id:"payment_dialog6",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script>
+    </div><div id="j_idt187" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt188" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images') }}" alt="" /></div>
+    <script id="j_idt187_s" type="text/javascript">$(function(){PrimeFaces.cw("BlockUI","masterLayoutVar",{id:"j_idt187",block:"master_Layout_form"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="1168780093040411243:-452930263442976215" autocomplete="off" />
+</body>
+</html>

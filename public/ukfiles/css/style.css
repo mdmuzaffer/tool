@@ -1,0 +1,88 @@
+body{
+ margin:0px;
+ padding:0px;
+}
+#top-panel{
+ height:166px;
+ background:url(../images/headerbg.png) repeat-x;
+ width:100%;
+ margin:0;
+ display:flex;
+}
+
+.top-heading{
+    
+    text-shadow: 1px 1px #000000;
+    color: #f5ffff !important;
+    font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size:25.34px;
+	}
+	
+.top-sub-heading{
+     padding-top: 10px;
+    text-shadow: 1px 1px #000000;
+    color: #f5ffff !important;
+    font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	font-size:21.7px;   
+}
+#heading-tp{
+text-decoration:underline;
+text-transform:uppercase;
+color:#1a1a1a;
+ font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+#middle-panel {
+    margin: 20px auto;
+    min-height: 247px;
+    width: 26%;
+    border: 1px solid #243B7F;
+    border-radius: 5px;
+    margin-bottom: 200px;
+}
+
+#middle-panel-heading {
+    text-align: center;
+    background: #243B7F !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    margin: 10px;
+    border: 1px solid #1682BA !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input {
+    border: 1px solid #243B7F;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 4px;
+    width: 200px;
+}
+
+#LoginButton{
+    border: 1px solid #1682ba;
+    background: #243B7F ;
+    font-weight: bold;
+    color: #ffffff;
+	width: 81px;
+
+}
+
+#footer-panel{
+   text-align:center;
+   width: 100%;
+    line-height: 50px;
+    background: #BDD0F0;
+    bottom: 0;
+    position: relative;
+    margin: 0 auto;
+    color: #FFF;
+}

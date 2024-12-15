@@ -1,0 +1,19 @@
+{
+    "name": "martins-74/artisan-gui",
+    "description": "Laravel Graphic User Interface for Artisan Comands. (Works on Live Servers with out SSH)",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Martins",
+            "email": "pedro.martins7435@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Martins\\ArtisanGUI\\": "src/"
+        }
+    },
+    "require": {}
+}

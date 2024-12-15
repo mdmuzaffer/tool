@@ -1,0 +1,34 @@
+.page-header .page-header-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.avatar-img,
+.img-fluid {
+    border: 0.11em dashed #ccc;
+}
+
+.sidenav-footer-content .avatar-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.dropdown-user .avatar-img {
+    width: 40px !important;
+    height: 40px;
+    max-width: none !important;
+    object-fit: contain;
+}
+
+.mandatory-label::after {
+    content: " * ";
+    color: red;
+    font-size: 1.5em;
+    padding: 0;
+    vertical-align: sub;
+}
+
+pre[nostyle] {
+    box-shadow: none;
+}

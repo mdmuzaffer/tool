@@ -1,0 +1,87 @@
+body{
+ margin:0px;
+ padding:0px;
+}
+#top-panel{
+ height:166px;
+ background:url(/gj/images/headerbg.png) repeat-x;
+ width:100%;
+ margin:0;
+ display:flex;
+}
+
+.top-heading{
+
+    text-shadow: 1px 1px #000000;
+    color: #f5ffff !important;
+    font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size:25.34px;
+	}
+
+.top-sub-heading{
+     padding-top: 10px;
+    text-shadow: 1px 1px #000000;
+    color: #f5ffff !important;
+    font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	font-size:21.7px;
+}
+#heading-tp{
+text-decoration:underline;
+text-transform:uppercase;
+color:#299FDE;
+ font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+#middle-panel{
+  margin:20px auto;
+  min-height:400px;
+  width:60%;
+  border:1px solid #02A1E2;
+  border-radius:5px;
+}
+
+#middle-panel-heading {
+    text-align: center;
+    background: #c7dff7 !important;
+    color: #3a3a3a !important;
+    font-weight: bold !important;
+    margin: 10px;
+    border: 1px solid #1682BA !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input {
+    border: 1px solid #1682ba;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 4px;
+    width: 200px;
+}
+
+#LoginButton{
+    border: 1px solid #1682ba;
+    background: #dfeffc ;
+    font-weight: bold;
+    color: #000000;
+	width: 81px;
+
+}
+
+#footer-panel{
+   text-align:center;
+   width: 100%;
+    line-height: 50px;
+    background: #019ddd;
+    bottom: 0;
+    position: relative;
+    margin: 0 auto;
+    color: #FFF;
+}

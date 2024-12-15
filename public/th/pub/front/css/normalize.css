@@ -1,0 +1,4097 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+dfn {
+    font-style: italic
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0
+}
+
+pre {
+    overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto
+}
+
+optgroup {
+    font-weight: 700
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
+
+#content {
+    height: 100%;
+    -webkit-touch-callout: none
+}
+
+.container,
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+.hidden-lg {
+    display: none !important
+}
+
+@media (max-width:767px) {
+    .hidden-xs {
+        display: none !important
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .hidden-sm {
+        display: none !important
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .hidden-md {
+        display: none !important
+    }
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px
+}
+
+.col,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.col,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+    float: left
+}
+
+.col-xs-12 {
+    width: 100%
+}
+
+.col-xs-11 {
+    width: 91.66666667%
+}
+
+.col-xs-10 {
+    width: 83.33333333%
+}
+
+.col-xs-9 {
+    width: 75%
+}
+
+.col-xs-8 {
+    width: 66.66666667%
+}
+
+.col-xs-7 {
+    width: 58.33333333%
+}
+
+.col-xs-6 {
+    width: 50%
+}
+
+.col-xs-5 {
+    width: 41.66666667%
+}
+
+.col-xs-4 {
+    width: 33.33333333%
+}
+
+.col-xs-3 {
+    width: 25%
+}
+
+.col-xs-2 {
+    width: 16.66666667%
+}
+
+.col-xs-1 {
+    width: 8.33333333%
+}
+
+.col-xs-offset-12 {
+    margin-left: 100%
+}
+
+.col-xs-offset-11 {
+    margin-left: 91.66666667%
+}
+
+.col-xs-offset-10 {
+    margin-left: 83.33333333%
+}
+
+.col-xs-offset-9 {
+    margin-left: 75%
+}
+
+.col-xs-offset-8 {
+    margin-left: 66.66666667%
+}
+
+.col-xs-offset-7 {
+    margin-left: 58.33333333%
+}
+
+.col-xs-offset-6 {
+    margin-left: 50%
+}
+
+.col-xs-offset-5 {
+    margin-left: 41.66666667%
+}
+
+.col-xs-offset-4 {
+    margin-left: 33.33333333%
+}
+
+.col-xs-offset-3 {
+    margin-left: 25%
+}
+
+.col-xs-offset-2 {
+    margin-left: 16.66666667%
+}
+
+.col-xs-offset-1 {
+    margin-left: 8.33333333%
+}
+
+.col-xs-offset-0 {
+    margin-left: 0
+}
+
+@media (min-width:768px) {
+
+    .col,
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+        float: left
+    }
+
+    .col-sm-12 {
+        width: 100%
+    }
+
+    .col-sm-11 {
+        width: 91.66666667%
+    }
+
+    .col-sm-10 {
+        width: 83.33333333%
+    }
+
+    .col-sm-9 {
+        width: 75%
+    }
+
+    .col-sm-8 {
+        width: 66.66666667%
+    }
+
+    .col-sm-7 {
+        width: 58.33333333%
+    }
+
+    .col-sm-6 {
+        width: 50%
+    }
+
+    .col-sm-5 {
+        width: 41.66666667%
+    }
+
+    .col-sm-4 {
+        width: 33.33333333%
+    }
+
+    .col-sm-3 {
+        width: 25%
+    }
+
+    .col-sm-2 {
+        width: 16.66666667%
+    }
+
+    .col-sm-1 {
+        width: 8.33333333%
+    }
+
+    .col-sm-offset-12 {
+        margin-left: 100%
+    }
+
+    .col-sm-offset-11 {
+        margin-left: 91.66666667%
+    }
+
+    .col-sm-offset-10 {
+        margin-left: 83.33333333%
+    }
+
+    .col-sm-offset-9 {
+        margin-left: 75%
+    }
+
+    .col-sm-offset-8 {
+        margin-left: 66.66666667%
+    }
+
+    .col-sm-offset-7 {
+        margin-left: 58.33333333%
+    }
+
+    .col-sm-offset-6 {
+        margin-left: 50%
+    }
+
+    .col-sm-offset-5 {
+        margin-left: 41.66666667%
+    }
+
+    .col-sm-offset-4 {
+        margin-left: 33.33333333%
+    }
+
+    .col-sm-offset-3 {
+        margin-left: 25%
+    }
+
+    .col-sm-offset-2 {
+        margin-left: 16.66666667%
+    }
+
+    .col-sm-offset-1 {
+        margin-left: 8.33333333%
+    }
+
+    .col-sm-offset-0 {
+        margin-left: 0
+    }
+}
+
+@media (min-width:992px) {
+
+    .col,
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+        float: left
+    }
+
+    .col-md-12 {
+        width: 100%
+    }
+
+    .col-md-11 {
+        width: 91.66666667%
+    }
+
+    .col-md-10 {
+        width: 83.33333333%
+    }
+
+    .col-md-9 {
+        width: 75%
+    }
+
+    .col-md-8 {
+        width: 66.66666667%
+    }
+
+    .col-md-7 {
+        width: 58.33333333%
+    }
+
+    .col-md-6 {
+        width: 50%
+    }
+
+    .col-md-5 {
+        width: 41.66666667%
+    }
+
+    .col-md-4 {
+        width: 33.33333333%
+    }
+
+    .col-md-3 {
+        width: 25%
+    }
+
+    .col-md-2 {
+        width: 16.66666667%
+    }
+
+    .col-md-1 {
+        width: 8.33333333%
+    }
+
+    .col-md-offset-12 {
+        margin-left: 100%
+    }
+
+    .col-md-offset-11 {
+        margin-left: 91.66666667%
+    }
+
+    .col-md-offset-10 {
+        margin-left: 83.33333333%
+    }
+
+    .col-md-offset-9 {
+        margin-left: 75%
+    }
+
+    .col-md-offset-8 {
+        margin-left: 66.66666667%
+    }
+
+    .col-md-offset-7 {
+        margin-left: 58.33333333%
+    }
+
+    .col-md-offset-6 {
+        margin-left: 50%
+    }
+
+    .col-md-offset-5 {
+        margin-left: 41.66666667%
+    }
+
+    .col-md-offset-4 {
+        margin-left: 33.33333333%
+    }
+
+    .col-md-offset-3 {
+        margin-left: 25%
+    }
+
+    .col-md-offset-2 {
+        margin-left: 16.66666667%
+    }
+
+    .col-md-offset-1 {
+        margin-left: 8.33333333%
+    }
+
+    .col-md-offset-0 {
+        margin-left: 0
+    }
+}
+
+@media (min-width:1200px) {
+
+    .col,
+    .col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12 {
+        float: left
+    }
+
+    .col-lg-12 {
+        width: 100%
+    }
+
+    .col-lg-11 {
+        width: 91.66666667%
+    }
+
+    .col-lg-10 {
+        width: 83.33333333%
+    }
+
+    .col-lg-9 {
+        width: 75%
+    }
+
+    .col-lg-8 {
+        width: 66.66666667%
+    }
+
+    .col-lg-7 {
+        width: 58.33333333%
+    }
+
+    .col-lg-6 {
+        width: 50%
+    }
+
+    .col-lg-5 {
+        width: 41.66666667%
+    }
+
+    .col-lg-4 {
+        width: 33.33333333%
+    }
+
+    .col-lg-3 {
+        width: 25%
+    }
+
+    .col-lg-2 {
+        width: 16.66666667%
+    }
+
+    .col-lg-1 {
+        width: 8.33333333%
+    }
+
+    .col-lg-offset-12 {
+        margin-left: 100%
+    }
+
+    .col-lg-offset-11 {
+        margin-left: 91.66666667%
+    }
+
+    .col-lg-offset-10 {
+        margin-left: 83.33333333%
+    }
+
+    .col-lg-offset-9 {
+        margin-left: 75%
+    }
+
+    .col-lg-offset-8 {
+        margin-left: 66.66666667%
+    }
+
+    .col-lg-offset-7 {
+        margin-left: 58.33333333%
+    }
+
+    .col-lg-offset-6 {
+        margin-left: 50%
+    }
+
+    .col-lg-offset-5 {
+        margin-left: 41.66666667%
+    }
+
+    .col-lg-offset-4 {
+        margin-left: 33.33333333%
+    }
+
+    .col-lg-offset-3 {
+        margin-left: 25%
+    }
+
+    .col-lg-offset-2 {
+        margin-left: 16.66666667%
+    }
+
+    .col-lg-offset-1 {
+        margin-left: 8.33333333%
+    }
+
+    .col-lg-offset-0 {
+        margin-left: 0
+    }
+}
+
+.clearfix,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.row:after,
+.row:before {
+    content: " ";
+    display: table
+}
+
+.clearfix:after,
+.container-fluid:after,
+.container:after,
+.row:after {
+    clear: both
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.pull-right {
+    float: right !important
+}
+
+.pull-left {
+    float: left !important
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+#uc-loader {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    z-index: 999999999999;
+    background-color: hsla(0, 0%, 100%, 0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s ease-out
+}
+
+.uc-image-container {
+    width: 40px;
+    height: 40px;
+    background-color: #252525;
+    z-index: 99999;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: fixed
+}
+
+.uc-spinner-real {
+    position: relative !important;
+    width: 48px;
+    height: 48px;
+    z-index: 99999;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -24px;
+    position: fixed;
+    -webkit-animation-name: sk-rotateplane;
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: sk-rotateplane;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateY(0deg)
+    }
+
+    to {
+        transform: perspective(120px) rotateY(1turn)
+    }
+}
+
+.opaqueClass {
+    background-color: hsla(0, 0%, 100%, .8) !important;
+    opacity: 1 !important
+}
+
+@media only screen and (max-width:768px) {
+    .opaqueClass {
+        background-color: hsla(0, 0%, 100%, .8) !important;
+        opacity: 1 !important
+    }
+}
+
+.forceShow {
+    display: block !important
+}
+
+@font-face {
+    font-family: ucglyphs;
+    src: url(https://static.urbanclap.com/dist/edb3c8b424460fef3dc649ff9a5d2de8.eot);
+    src: url(https://static.urbanclap.com/dist/edb3c8b424460fef3dc649ff9a5d2de8.eot?#iefix) format("embedded-opentype"), url(data:application/font-woff;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICI2YzBiMTZkNjk0YmRlMGU0ODhkZDQ5OWIzZTliOWI4Ny53b2ZmIjs=) format("woff"), url(https://static.urbanclap.com/dist/3bfb987f43384994bcd9f190cdf60bb5.ttf) format("truetype"), url(https://static.urbanclap.com/dist/17aed1f93d67ebc93d54b194c31a6b84.svg#ucglyphs) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[data-icon]:before {
+    font-family: ucglyphs !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-check-box-tick-hollow:before {
+    content: "c"
+}
+
+.icon-checkbox-selected:before {
+    content: "d"
+}
+
+.icon-checkbox-unselected:before {
+    content: "e"
+}
+
+.icon-close-cross:before {
+    content: "f"
+}
+
+.icon-cross-in-circle:before {
+    content: "g"
+}
+
+.icon-edit-profile:before {
+    content: "h"
+}
+
+.icon-hired-professional-recent-history:before {
+    content: "i"
+}
+
+.icon-log-in:before {
+    content: "j"
+}
+
+.icon-log-out:before {
+    content: "k"
+}
+
+.icon-phone-call:before {
+    content: "l"
+}
+
+.icon-radio-button-selected:before {
+    content: "m"
+}
+
+.icon-radio-button-unselected:before {
+    content: "n"
+}
+
+.icon-share:before {
+    content: "o"
+}
+
+.icon-tick-in-circle:before {
+    content: "p"
+}
+
+.icon-apple-products-repair:before {
+    content: "q"
+}
+
+.icon-appliance-repair:before {
+    content: "r"
+}
+
+.icon-birthday-planner:before {
+    content: "s"
+}
+
+.icon-car-cleaning:before {
+    content: "t"
+}
+
+.icon-carpenters:before {
+    content: "u"
+}
+
+.icon-chartered-accountant:before {
+    content: "v"
+}
+
+.icon-dj:before {
+    content: "w"
+}
+
+.icon-drivers:before {
+    content: "x"
+}
+
+.icon-electricians:before {
+    content: "y"
+}
+
+.icon-event-planner:before {
+    content: "z"
+}
+
+.icon-fitness-trainer:before {
+    content: "A"
+}
+
+.icon-guitar-lessons:before {
+    content: "B"
+}
+
+.icon-guitar-lessons-at-home:before {
+    content: "C"
+}
+
+.icon-interior-designers:before {
+    content: "D"
+}
+
+.icon-jazz-dance:before {
+    content: "E"
+}
+
+.icon-keyboard-lessons:before {
+    content: "F"
+}
+
+.icon-keyboard-lessons-at-home:before {
+    content: "G"
+}
+
+.icon-kitchen-cleaning:before {
+    content: "H"
+}
+
+.icon-laptop-repair:before {
+    content: "I"
+}
+
+.icon-laundry:before {
+    content: "J"
+}
+
+.icon-lawyers:before {
+    content: "K"
+}
+
+.icon-make-up:before {
+    content: "L"
+}
+
+.icon-mobile-repair:before {
+    content: "M"
+}
+
+.icon-nutritionist:before {
+    content: "N"
+}
+
+.icon-packers-and-movers:before {
+    content: "O"
+}
+
+.icon-sofa-cleaners:before {
+    content: "P"
+}
+
+.icon-weight-loss:before {
+    content: "Q"
+}
+
+.icon-yoga-at-home:before {
+    content: "R"
+}
+
+.icon-ac-repair:before {
+    content: "S"
+}
+
+.icon-baby-kids-photographers:before {
+    content: "T"
+}
+
+.icon-bathroom-cleaning:before {
+    content: "U"
+}
+
+.icon-brithday-party-caterers:before {
+    content: "V"
+}
+
+.icon-carpet-cleaning:before {
+    content: "W"
+}
+
+.icon-corporate-party-caterers:before {
+    content: "X"
+}
+
+.icon-house-cleaning:before {
+    content: "Y"
+}
+
+.icon-house-party-chef:before {
+    content: "Z"
+}
+
+.icon-maternity-photographers:before {
+    content: "0"
+}
+
+.icon-party-caterers:before {
+    content: "1"
+}
+
+.icon-party-photographers:before {
+    content: "2"
+}
+
+.icon-pest-control:before {
+    content: "3"
+}
+
+.icon-physiotherapist:before {
+    content: "4"
+}
+
+.icon-plumbers:before {
+    content: "5"
+}
+
+.icon-pre-wedding-photographers:before {
+    content: "6"
+}
+
+.icon-salon-at-home:before {
+    content: "7"
+}
+
+.icon-valet-services:before {
+    content: "8"
+}
+
+.icon-wedding-photographers:before {
+    content: "9"
+}
+
+.icon-yoga-at-studio:before {
+    content: "!"
+}
+
+.icon-dog-trainer:before {
+    content: '"'
+}
+
+.icon-bollywood-dance-class:before {
+    content: "%"
+}
+
+.icon-contemporary-dance-class:before {
+    content: "&"
+}
+
+.icon-german:before {
+    content: "'"
+}
+
+.icon-french:before {
+    content: "("
+}
+
+.icon-folk-dance-class:before {
+    content: ")"
+}
+
+.icon-family-photographer:before {
+    content: "*"
+}
+
+.icon-drum-classes:before {
+    content: "+"
+}
+
+.icon-hip-hop-dance-class:before {
+    content: "-"
+}
+
+.icon-kathak-dance-class:before {
+    content: "."
+}
+
+.icon-online-dietician:before {
+    content: "/"
+}
+
+.icon-new-categories:before {
+    content: ":"
+}
+
+.icon-marketing-categories:before {
+    content: ";"
+}
+
+.icon-piano-classes:before {
+    content: "<"
+}
+
+.icon-tiffin-services:before {
+    content: "="
+}
+
+.icon-water-tanker-cleaner:before {
+    content: ">"
+}
+
+.icon-wedding-caterer:before {
+    content: "?"
+}
+
+.icon-zumba-dance-class:before {
+    content: "@"
+}
+
+.icon-current-location-ios:before {
+    content: "]"
+}
+
+.icon-salsa:before {
+    content: "^"
+}
+
+.icon-empty-chats:before {
+    content: "_"
+}
+
+.icon-empty-requests:before {
+    content: "`"
+}
+
+.icon-uc-logo:before {
+    content: "#"
+}
+
+.icon-facebook:before,
+.icon-search:before {
+    content:"{"
+}
+
+.icon-uc-wordmark:before {
+    content: "}"
+}
+
+.icon-empty-hired-professionals:before {
+    content: "|"
+}
+
+.icon-facebook:before {
+    content: "~"
+}
+
+.icon-calendar-date:before {
+    content: "\\"
+}
+
+.icon-time-clock:before {
+    content: "\E000"
+}
+
+.icon-profile:before {
+    content: "\E001"
+}
+
+.icon-delete-trash-can:before {
+    content: "\E003"
+}
+
+.icon-current-location-fill:before {
+    content: "\E004"
+}
+
+.icon-microwave-repair:before {
+    content: "\E006"
+}
+
+.icon-painter:before {
+    content: "\E007"
+}
+
+.icon-tv-repair:before {
+    content: "\E008"
+}
+
+.icon-ro-water-purifier:before {
+    content: "\E009"
+}
+
+.icon-refridgerator-repair:before {
+    content: "\E00A"
+}
+
+.icon-washing-machine-repair:before {
+    content: "\E00B"
+}
+
+.icon-share-app-invite-friends:before {
+    content: "\E00D"
+}
+
+.icon-geyser-repair:before {
+    content: "\E00E"
+}
+
+.icon-cart-empty:before {
+    content: "\E00F"
+}
+
+.icon-cart-full:before {
+    content: "\E010"
+}
+
+.icon-play-video:before {
+    content: "\E012"
+}
+
+.icon-architect:before {
+    content: "\E014"
+}
+
+.icon-astrologer:before {
+    content: "\E015"
+}
+
+.icon-cctv-dealer:before {
+    content: "\E016"
+}
+
+.icon-couples-counselling:before {
+    content: "\E017"
+}
+
+.icon-economics-tutor:before {
+    content: "\E018"
+}
+
+.icon-english-tutors:before {
+    content: "\E019"
+}
+
+.icon-live-band:before {
+    content: "\E01A"
+}
+
+.icon-math-tutor:before {
+    content: "\E01B"
+}
+
+.icon-passport:before {
+    content: "\E01D"
+}
+
+.icon-pan-card:before {
+    content: "\E01C"
+}
+
+.icon-science-tutor:before {
+    content: "\E01E"
+}
+
+.icon-wedding-cards-at-home:before {
+    content: "\E01F"
+}
+
+.icon-web-development:before {
+    content: "\E020"
+}
+
+.icon-mehendi:before {
+    content: "\E00C"
+}
+
+.icon-chat:before {
+    content: "\E021"
+}
+
+.icon-urbanclap-logo-new:before {
+    content: "#"
+}
+
+.icon-cross-thick:before {
+    content: "\E023"
+}
+
+.icon-star:before {
+    content: "\E024"
+}
+
+.icon-wallet:before {
+    content: "\E025"
+}
+
+.icon-front-arrow-stemless-thin:before {
+    content: "$"
+}
+
+.icon-back-arrow-stemless:before {
+    content: "a"
+}
+
+.icon-filter-line:before {
+    content: "\E026"
+}
+
+.icon-arrow-up-stemless:before {
+    content: "\E02A"
+}
+
+.icon-chat-1:before {
+    content: "\E02B"
+}
+
+.icon-chat-line:before {
+    content: "\E02C"
+}
+
+.icon-filter-applied:before {
+    content: "\E02D"
+}
+
+.icon-filter-applied-fill:before {
+    content: "\E02E"
+}
+
+.icon-filter-fill:before {
+    content: "\E02F"
+}
+
+.icon-location-fill:before {
+    content: "\E030"
+}
+
+.icon-price-rupees:before {
+    content: "\E031"
+}
+
+.icon-pro:before {
+    content: "\E032"
+}
+
+.icon-pro-line:before {
+    content: "\E033"
+}
+
+.icon-reply:before {
+    content: "\E034"
+}
+
+.icon-reply-line:before {
+    content: "\E035"
+}
+
+.icon-bartenders:before {
+    content: "\E036"
+}
+
+.icon-construction-renovation:before {
+    content: "\E038"
+}
+
+.icon-consumer-lawyer:before {
+    content: "\E039"
+}
+
+.icon-corporate-lawyer:before {
+    content: "\E03A"
+}
+
+.icon-criminal-lawyer:before {
+    content: "\E03B"
+}
+
+.icon-debt-lawyer:before {
+    content: "\E03C"
+}
+
+.icon-doorstep-car-repair:before {
+    content: "\E03D"
+}
+
+.icon-doorstep-two-wheeler-repair:before {
+    content: "\E03E"
+}
+
+.icon-family-lawyer:before {
+    content: "\E03F"
+}
+
+.icon-property-lawyer:before {
+    content: "\E040"
+}
+
+.icon-traffic-lawyer:before {
+    content: "\E041"
+}
+
+.icon-ups-inverter-repair:before {
+    content: "\E042"
+}
+
+.icon-arrow-right-stemless-circle:before {
+    content: "\E043"
+}
+
+.icon-video:before {
+    content: "\E045"
+}
+
+.icon-current-location-crosshair-android:before {
+    content: "\E047"
+}
+
+.icon-menu-circles-android:before {
+    content: "\E048"
+}
+
+.icon-back-arrow-stem-new:before {
+    content: "\E049"
+}
+
+.icon-share-fill:before {
+    content: "\E04B"
+}
+
+.icon-timeout:before {
+    content: "\E04C"
+}
+
+.icon-holidays:before {
+    content: "\E04D"
+}
+
+.icon-help-chat:before {
+    content: "\E002"
+}
+
+.icon-ic-search:before {
+    content: "b"
+}
+
+.icon-arrow-down-stemless:before {
+    content: "\E027"
+}
+
+.icon-arrow-left-stemless:before {
+    content: "\E028"
+}
+
+.icon-arrow-right-stemless:before {
+    content: "\E029"
+}
+
+.icon-arrow-left-stemless-circle:before {
+    content: "\E044"
+}
+
+.icon-chat-2:before {
+    content: "\E046"
+}
+
+.icon-arrow-forward-stem:before {
+    content: "\E04A"
+}
+
+.icon-call-phone-droid2x:before {
+    content: "\E04E"
+}
+
+.icon-message:before {
+    content: "\E04F"
+}
+
+.icon-lock:before {
+    content: "\E050"
+}
+
+.icon-referral:before {
+    content: "\E051"
+}
+
+.icon-all-tutors:before {
+    content: "\E052"
+}
+
+.icon-more-ios:before {
+    content: "\E053"
+}
+
+.icon-mehendi-henna:before {
+    content: "\E054"
+}
+
+.icon-map-pin-location:before {
+    content: "\E055"
+}
+
+.icon-share-fill-1:before {
+    content: "\E056"
+}
+
+.icon-help-question:before {
+    content: "\E057"
+}
+
+.icon-add:before {
+    content: "\E058"
+}
+
+.icon-alert:before {
+    content: "\E05B"
+}
+
+.icon-all:before {
+    content: "\E05C"
+}
+
+.icon-ask-query:before {
+    content: "\E05D"
+}
+
+.icon-birthday-planner-1:before {
+    content: "\E05E"
+}
+
+.icon-chat-3:before {
+    content: "\E060"
+}
+
+.icon-done:before {
+    content: "\E061"
+}
+
+.icon-dry-cleaning:before {
+    content: "\E062"
+}
+
+.icon-hide:before {
+    content: "\E063"
+}
+
+.icon-hobbiesinterest:before {
+    content: "\E064"
+}
+
+.icon-keyboard:before {
+    content: "\E065"
+}
+
+.icon-notification:before {
+    content: "\E067"
+}
+
+.icon-plumber:before {
+    content: "\E068"
+}
+
+.icon-price:before {
+    content: "\E069"
+}
+
+.icon-rating:before {
+    content: "\E06A"
+}
+
+.icon-salon:before {
+    content: "\E06B"
+}
+
+.icon-saved-chat:before {
+    content: "\E06C"
+}
+
+.icon-selected:before {
+    content: "\E06D"
+}
+
+.icon-show:before {
+    content: "\E06E"
+}
+
+.icon-time:before {
+    content: "\E06F"
+}
+
+.icon-yoga:before {
+    content: "\E070"
+}
+
+.icon-filter:before {
+    content: "\E071"
+}
+
+.icon-business-service:before {
+    content: "\E072"
+}
+
+.icon-movers:before {
+    content: "\E074"
+}
+
+.icon-paint:before {
+    content: "\E075"
+}
+
+.icon-round-checkbox-1:before {
+    content: "\E077"
+}
+
+.icon-round-checkbox-selected:before {
+    content: "\E078"
+}
+
+.icon-share-1:before {
+    content: "\E079"
+}
+
+.icon-square-checkbox:before {
+    content: "\E07A"
+}
+
+.icon-square-checkbox-selected:before {
+    content: "\E07B"
+}
+
+.icon-calender:before {
+    content: "\E05F"
+}
+
+.icon-hobbies:before {
+    content: "\E073"
+}
+
+.icon-arrow-down:before {
+    content: "\E076"
+}
+
+.icon-arrow-up:before {
+    content: "\E07C"
+}
+
+.icon-list:before {
+    content: "\E07D"
+}
+
+.icon-best-match:before {
+    content: "\E07E"
+}
+
+.icon-location-pin:before {
+    content: "\E066"
+}
+
+.icon-external-link:before {
+    content: "\E07F"
+}
+
+.icon-morning:before {
+    content: "\E080"
+}
+
+.icon-male:before {
+    content: "\E081"
+}
+
+.icon-location-qna:before {
+    content: "\E082"
+}
+
+.icon-early-morning:before {
+    content: "\E083"
+}
+
+.icon-evening:before {
+    content: "\E084"
+}
+
+.icon-all-services:before {
+    content: "\E085"
+}
+
+.icon-female:before {
+    content: "\E086"
+}
+
+.icon-afternoon:before {
+    content: "\E087"
+}
+
+.icon-divorcelawyer:before {
+    content: "\E088"
+}
+
+.icon-digital-marketing:before {
+    content: "\E089"
+}
+
+.icon-foreign-currency-exchange:before {
+    content: "\E08A"
+}
+
+.icon-iosandroid-developers:before {
+    content: "\E08B"
+}
+
+.icon-recommended:before {
+    content: "\E08C"
+}
+
+.icon-star-1:before {
+    content: "\E08D"
+}
+
+.icon-express-cleaning:before {
+    content: "\E08E"
+}
+
+.icon-chimmney-repair:before {
+    content: "\E037"
+}
+
+.icon-accounts-tutors:before {
+    content: "\E013"
+}
+
+.icon-become-a-pro:before {
+    content: "\E08F"
+}
+
+.icon-messages:before {
+    content: "\E090"
+}
+
+.icon-chat-with-us:before {
+    content: "\E091"
+}
+
+.icon-call:before {
+    content: "\E092"
+}
+
+.icon-projects:before {
+    content: "\E093"
+}
+
+.icon-rate:before {
+    content: "\E094"
+}
+
+.icon-wallet-1:before {
+    content: "\E096"
+}
+
+.icon-share-earn:before {
+    content: "\E097"
+}
+
+.icon-shoe-spa:before {
+    content: "\E095"
+}
+
+.icon-onboarding-arrow:before {
+    content: "\E098"
+}
+
+.icon-fitness-trainer-1:before {
+    content: "\E099"
+}
+
+.icon-maid-service:before {
+    content: "\E09A"
+}
+
+.icon-nurse-at-home:before {
+    content: "\E09B"
+}
+
+.icon-massage-at-home:before {
+    content: ","
+}
+
+.icon-insurance-agent:before {
+    content: "\E09C"
+}
+
+.icon-health-checkup:before {
+    content: "\E09D"
+}
+
+.icon-vastu:before {
+    content: "\E09E"
+}
+
+.icon-add-image-ios:before {
+    content: "\E09F"
+}
+
+.icon-call-ios:before {
+    content: "\E0A1"
+}
+
+.icon-double-tick-ios:before {
+    content: "\E022"
+}
+
+.icon-tick:before {
+    content: "["
+}
+
+.icon-single-tick-ios:before {
+    content: "\E0A0"
+}
+
+.icon-message-pro-ios:before {
+    content: "\E0A2"
+}
+
+.icon-pro-profile-video:before {
+    content: "\E0A3"
+}
+
+.icon-listing-name-hover:before {
+    content: "\E0A4"
+}
+
+.icon-dry-time:before {
+    content: "\E0A6"
+}
+
+.icon-dry-time-copy:before {
+    content: "\E0A7"
+}
+
+.icon-duration:before {
+    content: "\E0A8"
+}
+
+.icon-equipment:before {
+    content: "\E0A9"
+}
+
+.icon-pricing:before {
+    content: "\E0AA"
+}
+
+.icon-service-guarantee:before {
+    content: "\E0AC"
+}
+
+.icon-team-size:before {
+    content: "\E0AD"
+}
+
+.icon-browse-pros:before {
+    content: "\E0AF"
+}
+
+.icon-match-pros:before {
+    content: "\E0B0"
+}
+
+.icon-review-pros:before {
+    content: "\E0B1"
+}
+
+.icon-schedule-call:before {
+    content: "\E0B2"
+}
+
+.icon-tell-requirements:before {
+    content: "\E0B3"
+}
+
+.icon-cancel:before {
+    content: "\E0B4"
+}
+
+.icon-reschedule:before {
+    content: "\E0B5"
+}
+
+.icon-sent:before {
+    content: "\E0B6"
+}
+
+.icon-swipe:before {
+    content: "\E0B7"
+}
+
+.icon-vieworder:before {
+    content: "\E0B8"
+}
+
+.icon-1:before {
+    content: "\E0B9"
+}
+
+.icon-2:before {
+    content: "\E0BA"
+}
+
+.icon-3:before {
+    content: "\E0BB"
+}
+
+.icon-4:before {
+    content: "\E0BC"
+}
+
+.icon-5:before {
+    content: "\E0BD"
+}
+
+.icon-wedding-makeup:before {
+    content: "\E0BE"
+}
+
+.icon-diwali-lights:before {
+    content: "\E0BF"
+}
+
+.icon-salon-1:before {
+    content: "\E0C0"
+}
+
+.icon-at-home:before {
+    content: "\E059"
+}
+
+.icon-best-brands:before {
+    content: "\E05A"
+}
+
+.icon-disposable:before {
+    content: "\E0AB"
+}
+
+.icon-salon-equipment:before {
+    content: "\E0AE"
+}
+
+.icon-at-home-1:before {
+    content: "\E0C1"
+}
+
+.icon-salon-rebook:before {
+    content: "\E0C2"
+}
+
+.icon-lcoation-line:before {
+    content: "\E005"
+}
+
+.icon-addition:before {
+    content: "\E0C3"
+}
+
+.icon-subtract:before {
+    content: "\E0C6"
+}
+
+.icon-info:before {
+    content: "\E0C5"
+}
+
+.icon-net-bank:before {
+    content: "\E0C7"
+}
+
+.icon-saved-card:before {
+    content: "\E0C8"
+}
+
+.icon-wallet-2:before {
+    content: "\E0C9"
+}
+
+.icon-planner-catering:before {
+    content: "\E0CA"
+}
+
+.icon-planner-decoration:before {
+    content: "\E0CB"
+}
+
+.icon-planner-entertainment:before {
+    content: "\E0CC"
+}
+
+.icon-planner-gift:before {
+    content: "\E0CD"
+}
+
+.icon-planner-photography:before {
+    content: "\E0CE"
+}
+
+.icon-planner-venue:before {
+    content: "\E0CF"
+}
+
+.icon-savemoney:before {
+    content: "\E0D0"
+}
+
+.icon-savetime:before {
+    content: "\E0D1"
+}
+
+.icon-circle:before {
+    content: "\E011"
+}
+
+.icon-clean-area:before {
+    content: "\E0A5"
+}
+
+.icon-card:before {
+    content: "\E0D2"
+}
+
+.icon-failure:before {
+    content: "\E0D3"
+}
+
+.icon-receipt:before {
+    content: "\E0D4"
+}
+
+.icon-success:before {
+    content: "\E0D5"
+}
+
+.icon-success-fill:before {
+    content: "\E0D6"
+}
+
+.icon-failure-fill:before {
+    content: "\E0D7"
+}
+
+.icon-flooring:before {
+    content: "\E0D9"
+}
+
+.icon-glasswork:before {
+    content: "\E0DA"
+}
+
+.icon-masonry:before {
+    content: "\E0DB"
+}
+
+.icon-minorrepair:before {
+    content: "\E0DC"
+}
+
+.icon-pop:before {
+    content: "\E0DD"
+}
+
+.icon-renovation:before {
+    content: "\E0DE"
+}
+
+.icon-studyabroad:before {
+    content: "\E0DF"
+}
+
+.icon-waterproofing:before {
+    content: "\E0E0"
+}
+
+.icon-woodwork-furniture:before {
+    content: "\E0E1"
+}
+
+.icon-cash:before {
+    content: "\E0E2"
+}
+
+.icon-construction:before {
+    content: "\E0D8"
+}
+
+.icon-metal-fabrication:before {
+    content: "\E0E3"
+}
+
+.icon-info-1:before {
+    content: "\E0E5"
+}
+
+.icon-info-2:before {
+    content: "\E4E4"
+}
+
+.icon-cart-filled:before {
+    content: "\E0C4"
+}
+
+.icon-left-chevron:before {
+    content: "\E0E6"
+}
+
+.icon-left-right:before {
+    content: "\E0E7"
+}
+
+.icon-star-filled:before {
+    content: "\E0E8"
+}
+
+.icon-star-empty:before {
+    content: "\E0E9"
+}
+
+.icon-next:before {
+    content: "\E0EA"
+}
+
+.icon-matched-pro:before {
+    content: "\E0EB"
+}
+
+.icon-location-dropdown:before {
+    content: "\E0EC"
+}
+
+.icon-location:before {
+    content: "\E0ED"
+}
+
+.icon-highquality:before {
+    content: "\E0EE"
+}
+
+.icon-hasslefree:before {
+    content: "\E0EF"
+}
+
+.icon-back:before {
+    content: "\E0F0"
+}
+
+.icon-business-services:before {
+    content: "\E0F2"
+}
+
+.icon-events-weddings:before {
+    content: "\E0F3"
+}
+
+.icon-lessons-hobbies:before {
+    content: "\E0F4"
+}
+
+.icon-personal-more:before {
+    content: "\E0F5"
+}
+
+.icon-home-repair:before {
+    content: "\E0F6"
+}
+
+.icon-beauty-health:before {
+    content: "\E0F1"
+}
+
+.icon-back-ios:before {
+    content: "\E0F7"
+}
+
+.icon-cross:before {
+    content: "\E0F8"
+}
+
+.icon-menu:before {
+    content: "\E0F9"
+}
+
+.icon-menu-1:before {
+    content: "\E0FA"
+}
+
+.icon-back-ios-1:before {
+    content: "\E0FB"
+}
+
+.icon-cross-1:before {
+    content: "\E0FC"
+}
+
+.icon-mail-profile:before {
+    content: "\E0FD"
+}
+
+.icon-fb-profile:before {
+    content: "\E0FE"
+}
+
+.icon-twitter-profile:before {
+    content: "\E0FF"
+}
+
+.icon-link-profile:before {
+    content: "\E100"
+}
+
+.icon-verified-professionals:before {
+    content: "\E0E4"
+}
+
+.icon-chat-2-1:before {
+    content: "\E101"
+}
+
+.icon-diet-list:before {
+    content: "\E102"
+}
+
+.icon-happiness:before {
+    content: "\E103"
+}
+
+.icon-verified-1:before {
+    content: "\E104"
+}
+
+@font-face {
+    font-family: untitled-font-1;
+    src: url(https://static.urbanclap.com/dist/136499e2334c6b5d3eaadc45e224b88c.eot);
+    src: url(https://static.urbanclap.com/dist/136499e2334c6b5d3eaadc45e224b88c.eot?#iefix) format("embedded-opentype"), url(https://static.urbanclap.com/dist/a44fdb55524933de494c06283dc20de2.woff) format("woff"), url(https://static.urbanclap.com/dist/5c32703836878c3a35913e01e050d1b7.ttf) format("truetype"), url(https://static.urbanclap.com/dist/5a840be6acd9c375225d4c400be0fe5d.svg#untitled-font-1) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[data-icon-2]:before {
+    font-family: untitled-font-1 !important;
+    content: attr(data-icon-2);
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-adviceatyourconvenience:before {
+    content: "a"
+}
+
+.icon-aftersaleservice:before {
+    content: "b"
+}
+
+.icon-assurance:before {
+    content: "c"
+}
+
+.icon-astrology:before {
+    content: "d"
+}
+
+.icon-branded-paints:before {
+    content: "e"
+}
+
+.icon-certifiedsafechemicals:before {
+    content: "f"
+}
+
+.icon-comfort-of-your-home:before {
+    content: "g"
+}
+
+.icon-customer-protection:before {
+    content: "h"
+}
+
+.icon-designers:before {
+    content: "i"
+}
+
+.icon-experience-verified-beauticians:before {
+    content: "j"
+}
+
+.icon-experienced-pro:before {
+    content: "k"
+}
+
+.icon-experiencedmaids:before {
+    content: "l"
+}
+
+.icon-getappdeveloper:before {
+    content: "m"
+}
+
+.icon-highqualitymehendi:before {
+    content: "n"
+}
+
+.icon-insurance-protection:before {
+    content: "o"
+}
+
+.icon-maskingpostpaint:before {
+    content: "p"
+}
+
+.icon-on-time-completion:before {
+    content: "q"
+}
+
+.icon-personalisedquotes:before {
+    content: "r"
+}
+
+.icon-premium-brand-cctv:before {
+    content: "s"
+}
+
+.icon-projectmanager:before {
+    content: "t"
+}
+
+.icon-quote:before {
+    content: "u"
+}
+
+.icon-relaxing-therapies:before {
+    content: "v"
+}
+
+.icon-resultorientedtutors:before {
+    content: "w"
+}
+
+.icon-smalltolargeprojects:before {
+    content: "x"
+}
+
+.icon-spa-experience:before {
+    content: "y"
+}
+
+.icon-standardpricing:before {
+    content: "z"
+}
+
+.icon-superior-packaging:before {
+    content: "A"
+}
+
+.icon-top-brands:before {
+    content: "B"
+}
+
+.icon-trained-male-therapists:before {
+    content: "C"
+}
+
+.icon-tutorsforallsubject:before {
+    content: "D"
+}
+
+.icon-varietyofmehendipattern:before {
+    content: "E"
+}
+
+.icon-view-all-services:before {
+    content: "F"
+}
+
+.icon-view-all-services-copy:before {
+    content: "G"
+}
+
+.icon-view-all-services-copy-2:before {
+    content: "H"
+}
+
+.icon-loseweight:before {
+    content: "I"
+}
+
+.icon-laser:before {
+    content: "J"
+}
+
+.icon-additionalcomponents:before {
+    content: "K"
+}
+
+.icon-at-home:before {
+    content: "L"
+}
+
+.icon-photographer:before {
+    content: "M"
+}
+
+.icon-proequipment:before {
+    content: "N"
+}
+
+$font-axiforma-regular:Axiforma-Regular,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-axiforma-bold:Axiforma-Bold,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-axiforma-semibold:Axiforma-SemiBold,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-axiforma-medium:Axiforma-Medium,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-proximanova-regular:ProximaNova-Regular,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-proximanova-bold:ProximaNova-Bold,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$font-proximanova-semibold:ProximaNova-Semi-Bold,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+$fs-xs:12px;
+$fs-s:13px;
+$fs-m:14px;
+$fs-l:15px;
+$fs-xl:16px;
+$fs-xs-m:9px;
+$fs-s-m:10px;
+$fs-m-m:11px;
+$fs-l-m:12px;
+$fs-xl-m:13px;
+$fs-xxl-m:14px;
+$mobile-break:768px;
+$layers:below,
+mainContent,
+qaFooter,
+above,
+interstitial,
+sticky,
+header,
+lightbox,
+sideBar,
+modal,
+superModal,
+loader;
+$headerHeight:60px;
+
+@mixin iconify($fontSize, $lineHeight) {
+    font-family: ucglyphs;
+    font-size: $fontSize;
+    line-height: $lineHeight
+}
+
+@mixin ucBrowserHack ($width, $height, $display) {
+    width: $width;
+    height: $height;
+    display: $display
+}
+
+@mixin adjustHeaderHeight () {
+    padding-top: 0;
+
+    @media screen and (min-width:768px) {
+        padding-top: $headerHeight
+    }
+}
+
+@mixin ripple () {
+    background-position: 50%;
+    transition: all .25s;
+
+    &:hover {
+        background: #f5f5f5 radial-gradient(circle, transparent 1%, #f4f4f4 0) 50%/15000%
+    }
+
+    &:active {
+        background-color: #fff;
+        background-size: 100%;
+        transition: background 0s
+    }
+}
+
+@mixin textProperties($fontSize:14px, $fontWeight:500, $lineHeight:20px, $color:#212121) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color
+}
+
+.cssloadSpeedingWheel {
+    position: relative;
+    top: 30px;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border: 3px solid #304ffe;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 1s infinite linear;
+    -o-animation: cssload-spin 1s infinite linear;
+    -ms-animation: cssload-spin 1s infinite linear;
+    -webkit-animation: cssload-spin 1s infinite linear;
+    -moz-animation: cssload-spin 1s infinite linear
+}
+
+@keyframes cssload-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.date-picker {
+    overflow: hidden;
+    background: #fff;
+    font-size: 14px;
+    width: 80%;
+    height: 100%;
+    margin: 2rem auto 0;
+    max-width: 300px;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2
+}
+
+.date-picker .dp-table {
+    border-color: #a8a8a8
+}
+
+.date-picker .dp-table .dp-cell {
+    cursor: pointer;
+    padding: 10px 5px;
+    background: inherit;
+    width: 14.2857%;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2c3135;
+    font-weight: 500
+}
+
+.date-picker .dp-table .dp-cell.dp-next,
+.date-picker .dp-table .dp-cell.dp-prev {
+    background: inherit;
+    display: inline-block;
+    color: #bac2c7;
+    background-color: #edf2f5;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff
+}
+
+.date-picker .dp-table .dp-cell:hover {
+    color: inherit;
+    font-weight: inherit;
+    background: #eee
+}
+
+.date-picker .dp-table .dp-cell.dp-disabled {
+    cursor: default;
+    color: #bac2c7;
+    background-color: #edf2f5;
+    font-size: 14px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff
+}
+
+.date-picker .dp-table .dp-cell.dp-value {
+    color: #000;
+    background: #eee
+}
+
+.date-picker .dp-table .dp-cell.dp-current {
+    color: #304ffe;
+    background: #edf2f5
+}
+
+.date-picker .dp-table .dp-cell.dp-in-range {
+    background: #eee
+}
+
+.date-picker .dp-table .dp-cell.dp-value {
+    background: #304ffe;
+    color: #fff;
+    border-radius: 2px
+}
+
+.date-picker .dp-table .dp-cell.dp-month {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.date-picker .dp-table .dp-cell.dp-week-day-name {
+    cursor: default;
+    background: inherit;
+    display: inline-block;
+    float: left;
+    width: 14.2857%;
+    color: #7f8fa4 !important;
+    font-size: 14px
+}
+
+.date-picker .dp-footer {
+    padding: 3px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top-width: 0
+}
+
+.date-picker .dp-footer .dp-footer-selected,
+.date-picker .dp-footer .dp-footer-today {
+    padding: 5px 15px;
+    border-width: 1px;
+    cursor: pointer
+}
+
+.date-picker .dp-body {
+    overflow: hidden
+}
+
+.date-picker .dp-nav-cell,
+.date-picker .dp-nav-view,
+.date-picker .dp-week-day-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    touch-callout: none
+}
+
+.date-picker .dp-nav-cell,
+.date-picker .dp-nav-view {
+    cursor: pointer
+}
+
+.date-picker .dp-nav-cell {
+    background: inherit
+}
+
+.date-picker .dp-nav-cell:hover {
+    background: #eee
+}
+
+.date-picker .dp-nav-view,
+.date-picker .dp-nav-view .dp-nav-cell {
+    background: inherit
+}
+
+.date-picker .dp-nav-view:hover {
+    background: #eee
+}
+
+.date-picker .dp-weekend.dp-weekend-highlight,
+.date-picker .dp-weekend.dp-weekend-highlight.dp-value,
+.date-picker .dp-weekend.dp-weekend-highlight.dp-value:hover,
+.date-picker .dp-weekend.dp-weekend-highlight:hover {
+    color: #bf0909
+}
+
+.date-picker .dp-nav-table .dp-cell {
+    border-top-width: 0;
+    border-bottom-width: 0
+}
+
+.date-picker .dp-decade-view,
+.date-picker .dp-month-view,
+.date-picker .dp-year-view {
+    overflow: hidden;
+    touch-callout: none
+}
+
+.date-picker .dp-decade-view .dp-cell,
+.date-picker .dp-year-view .dp-cell {
+    width: 25% !important
+}
+
+.date-picker {
+    @include ucBrowserHack(80%, auto, block)
+}
+
+.date-picker,
+.date-picker * {
+    box-sizing: border-box;
+    outline: transparent
+}
+
+.date-picker .dp-table {
+    width: 100%;
+    height: 100%
+}
+
+.date-picker .dp-row {
+    overflow: hidden;
+    display: block
+}
+
+.date-picker .dp-week-day-names {
+    overflow: hidden
+}
+
+.date-picker .dp-nav-table {
+    display: block;
+    width: 100%
+}
+
+.date-picker .dp-nav-table .dp-cell {
+    display: inline-block
+}
+
+.date-picker .dp-nav-table .dp-cell:first-child {
+    display: inline-block;
+    width: 15%;
+    font-size: 26px;
+    top: 5px;
+    position: relative
+}
+
+.date-picker .dp-nav-table .dp-cell:nth-child(2) {
+    display: inline-block;
+    width: 70%
+}
+
+.date-picker .dp-nav-table .dp-cell:nth-child(3) {
+    display: inline-block;
+    width: 15%;
+    font-size: 26px;
+    top: 5px;
+    position: relative
+}
+
+.PresetDateRangePicker_panel {
+    padding: 0 22px 11px
+}
+
+.PresetDateRangePicker_button {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    background: 0 0;
+    border: 2px solid #00a699;
+    color: #00a699;
+    padding: 4px 12px;
+    margin-right: 8px;
+    font: inherit;
+    font-weight: 700;
+    line-height: normal;
+    overflow: visible;
+    box-sizing: border-box;
+    cursor: pointer
+}
+
+.PresetDateRangePicker_button:active {
+    outline: 0
+}
+
+.PresetDateRangePicker_button__selected {
+    color: #fff;
+    background: #00a699
+}
+
+.SingleDatePicker {
+    position: relative;
+    display: inline-block
+}
+
+.SingleDatePicker__block {
+    display: block
+}
+
+.SingleDatePicker_picker {
+    z-index: 1;
+    background-color: #fff;
+    position: absolute
+}
+
+.SingleDatePicker_picker__rtl {
+    direction: rtl
+}
+
+.SingleDatePicker_picker__directionLeft {
+    left: 0
+}
+
+.SingleDatePicker_picker__directionRight {
+    right: 0
+}
+
+.SingleDatePicker_picker__portal {
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+.SingleDatePicker_picker__fullScreenPortal {
+    background-color: #fff
+}
+
+.SingleDatePicker_closeButton {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    z-index: 2
+}
+
+.SingleDatePicker_closeButton:focus,
+.SingleDatePicker_closeButton:hover {
+    color: darken(#cacccd, 10%);
+    text-decoration: none
+}
+
+.SingleDatePicker_closeButton_svg {
+    height: 15px;
+    width: 15px;
+    fill: #cacccd
+}
+
+.SingleDatePickerInput {
+    display: inline-block;
+    background-color: #fff
+}
+
+.SingleDatePickerInput__withBorder {
+    border: 1px solid #dbdbdb
+}
+
+.SingleDatePickerInput__rtl {
+    direction: rtl
+}
+
+.SingleDatePickerInput__disabled {
+    background-color: #f2f2f2
+}
+
+.SingleDatePickerInput__block {
+    display: block
+}
+
+.SingleDatePickerInput__showClearDate {
+    padding-right: 30px
+}
+
+.SingleDatePickerInput_clearDate {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px 0 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.SingleDatePickerInput_clearDate__default:focus,
+.SingleDatePickerInput_clearDate__default:hover {
+    background: #dbdbdb;
+    border-radius: 50%
+}
+
+.SingleDatePickerInput_clearDate__small {
+    padding: 6px
+}
+
+.SingleDatePickerInput_clearDate__hide {
+    visibility: hidden
+}
+
+.SingleDatePickerInput_clearDate_svg {
+    fill: #82888a;
+    height: 12px;
+    width: 15px;
+    vertical-align: middle
+}
+
+.SingleDatePickerInput_clearDate_svg__small {
+    height: 9px
+}
+
+.SingleDatePickerInput_calendarIcon {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 0 5px 0 10px
+}
+
+.SingleDatePickerInput_calendarIcon_svg {
+    fill: #82888a;
+    height: 15px;
+    width: 14px;
+    vertical-align: middle
+}
+
+.DateRangePicker {
+    position: relative;
+    display: inline-block
+}
+
+.DateRangePicker__block {
+    display: block
+}
+
+.DateRangePicker_picker {
+    z-index: 1;
+    background-color: #fff;
+    position: absolute
+}
+
+.DateRangePicker_picker__rtl {
+    direction: rtl
+}
+
+.DateRangePicker_picker__directionLeft {
+    left: 0
+}
+
+.DateRangePicker_picker__directionRight {
+    right: 0
+}
+
+.DateRangePicker_picker__portal {
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+.DateRangePicker_picker__fullScreenPortal {
+    background-color: #fff
+}
+
+.DateRangePicker_closeButton {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    z-index: 2
+}
+
+.DateRangePicker_closeButton:focus,
+.DateRangePicker_closeButton:hover {
+    color: darken(#cacccd, 10%);
+    text-decoration: none
+}
+
+.DateRangePicker_closeButton_svg {
+    height: 15px;
+    width: 15px;
+    fill: #cacccd
+}
+
+.DayPicker {
+    position: relative;
+    text-align: left
+}
+
+.DayPicker,
+.DayPicker__horizontal {
+    background: #fff
+}
+
+.DayPicker__verticalScrollable {
+    height: 100%
+}
+
+.DayPicker__hidden {
+    visibility: hidden
+}
+
+.DayPicker__withBorder {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .05), 0 0 0 1px rgba(0, 0, 0, .07);
+    border-radius: 3px
+}
+
+.DayPicker_portal__horizontal {
+    box-shadow: none;
+    position: absolute;
+    left: 50%;
+    top: 50%
+}
+
+.DayPicker_portal__vertical {
+    position: static
+}
+
+.DayPicker_focusRegion {
+    outline: 0
+}
+
+.DayPicker_weekHeaders {
+    position: relative
+}
+
+.DayPicker_weekHeaders__horizontal {
+    margin-left: 9px
+}
+
+.DayPicker_weekHeader {
+    color: #757575;
+    position: absolute;
+    top: 62px;
+    z-index: 2;
+    padding: 0 13px;
+    text-align: left
+}
+
+.DayPicker_weekHeader__vertical {
+    left: 50%
+}
+
+.DayPicker_weekHeader__verticalScrollable {
+    top: 0;
+    display: table-row;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fff;
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+
+.DayPicker_weekHeader_ul {
+    list-style: none;
+    margin: 1px 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 14px
+}
+
+.DayPicker_weekHeader_li {
+    display: inline-block;
+    text-align: center
+}
+
+.DayPicker_transitionContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px
+}
+
+.DayPicker_transitionContainer__horizontal {
+    transition: height .2s ease-in-out
+}
+
+.DayPicker_transitionContainer__vertical {
+    width: 100%
+}
+
+.DayPicker_transitionContainer__verticalScrollable {
+    padding-top: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll
+}
+
+.DayPickerKeyboardShortcuts_buttonReset {
+    background: 0 0;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px
+}
+
+.DayPickerKeyboardShortcuts_buttonReset:active {
+    outline: 0
+}
+
+.DayPickerKeyboardShortcuts_show {
+    width: 22px;
+    position: absolute;
+    z-index: 2
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight {
+    border-top: 26px solid transparent;
+    border-right: 33px solid #00a699;
+    bottom: 0;
+    right: 0
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight:hover {
+    border-right: 33px solid #008489
+}
+
+.DayPickerKeyboardShortcuts_show__topRight {
+    border-bottom: 26px solid transparent;
+    border-right: 33px solid #00a699;
+    top: 0;
+    right: 0
+}
+
+.DayPickerKeyboardShortcuts_show__topRight:hover {
+    border-right: 33px solid #008489
+}
+
+.DayPickerKeyboardShortcuts_show__topLeft {
+    border-bottom: 26px solid transparent;
+    border-left: 33px solid #00a699;
+    top: 0;
+    left: 0
+}
+
+.DayPickerKeyboardShortcuts_show__topLeft:hover {
+    border-left: 33px solid #008489
+}
+
+.DayPickerKeyboardShortcuts_showSpan {
+    color: #fff;
+    position: absolute
+}
+
+.DayPickerKeyboardShortcuts_showSpan__bottomRight {
+    bottom: 0;
+    right: -28px
+}
+
+.DayPickerKeyboardShortcuts_showSpan__topRight {
+    top: 1px;
+    right: -28px
+}
+
+.DayPickerKeyboardShortcuts_showSpan__topLeft {
+    top: 1px;
+    left: -28px
+}
+
+.DayPickerKeyboardShortcuts_panel {
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    padding: 22px;
+    margin: 33px
+}
+
+.DayPickerKeyboardShortcuts_title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0
+}
+
+.DayPickerKeyboardShortcuts_list {
+    list-style: none;
+    padding: 0;
+    font-size: 14px
+}
+
+.DayPickerKeyboardShortcuts_close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    z-index: 2
+}
+
+.DayPickerKeyboardShortcuts_close:active {
+    outline: 0
+}
+
+.DayPickerKeyboardShortcuts_closeSvg {
+    height: 15px;
+    width: 15px;
+    fill: #cacccd
+}
+
+.DayPickerKeyboardShortcuts_closeSvg:focus,
+.DayPickerKeyboardShortcuts_closeSvg:hover {
+    fill: #82888a
+}
+
+.KeyboardShortcutRow {
+    list-style: none;
+    margin: 6px 0
+}
+
+.KeyboardShortcutRow__block {
+    margin-bottom: 16px
+}
+
+.KeyboardShortcutRow_keyContainer {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: right;
+    margin-right: 6px
+}
+
+.KeyboardShortcutRow_keyContainer__block {
+    text-align: left;
+    display: inline
+}
+
+.KeyboardShortcutRow_key {
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #f2f2f2;
+    padding: 2px 6px
+}
+
+.KeyboardShortcutRow_action {
+    display: inline;
+    word-break: break-word;
+    margin-left: 8px
+}
+
+.DayPickerNavigation_container {
+    position: relative;
+    z-index: 2
+}
+
+.DayPickerNavigation_container__vertical {
+    background: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 52px;
+    width: 100%
+}
+
+.DayPickerNavigation_container__verticalScrollable {
+    position: relative
+}
+
+.DayPickerNavigation_button {
+    cursor: pointer;
+    line-height: .78;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.DayPickerNavigation_button__default {
+    border: 1px solid #e4e7e7;
+    background-color: #fff;
+    color: #757575
+}
+
+.DayPickerNavigation_button__default:focus,
+.DayPickerNavigation_button__default:hover {
+    border: 1px solid #c4c4c4
+}
+
+.DayPickerNavigation_button__default:active {
+    background: #f2f2f2
+}
+
+.DayPickerNavigation_button__horizontal {
+    border-radius: 3px;
+    padding: 6px 9px;
+    top: 18px;
+    position: absolute
+}
+
+.DayPickerNavigation_leftButton__horizontal {
+    left: 22px
+}
+
+.DayPickerNavigation_rightButton__horizontal {
+    right: 22px
+}
+
+.DayPickerNavigation_button__vertical {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 50%
+}
+
+.DayPickerNavigation_button__vertical__default {
+    padding: 5px
+}
+
+.DayPickerNavigation_nextButton__vertical__default {
+    border-left: 0
+}
+
+.DayPickerNavigation_nextButton__verticalScrollable {
+    width: 100%
+}
+
+.DayPickerNavigation_svg__horizontal {
+    height: 19px;
+    width: 19px;
+    fill: #82888a
+}
+
+.DayPickerNavigation_svg__vertical {
+    height: 42px;
+    width: 42px;
+    fill: #565a5c
+}
+
+.CalendarMonthGrid {
+    background: #fff;
+    text-align: left;
+    z-index: 0
+}
+
+.CalendarMonthGrid__animating {
+    z-index: 1
+}
+
+.CalendarMonthGrid__horizontal {
+    position: absolute;
+    left: 9px
+}
+
+.CalendarMonthGrid__vertical {
+    margin: 0 auto
+}
+
+.CalendarMonthGrid__vertical_scrollable {
+    margin: 0 auto;
+    overflow-y: scroll
+}
+
+.CalendarMonthGrid_month__horizontal {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 100%
+}
+
+.CalendarMonthGrid_month__hideForAnimation {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none
+}
+
+.CalendarMonth {
+    background: #fff;
+    text-align: center;
+    padding: 0 13px;
+    vertical-align: top;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.CalendarMonth_table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.CalendarMonth_caption {
+    color: #565a5c;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 37px;
+    caption-side: top
+}
+
+.CalendarMonth_caption__verticalScrollable {
+    padding-top: 12px;
+    padding-bottom: 7px
+}
+
+.CalendarDay {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center
+}
+
+.CalendarDay:active {
+    outline: 0
+}
+
+.CalendarDay__defaultCursor {
+    cursor: default
+}
+
+.CalendarDay__default {
+    border: 1px solid #e4e7e7;
+    color: #565a5c;
+    background: #fff
+}
+
+.CalendarDay__default:hover {
+    background: #e4e7e7;
+    border: 1px double #e4e7e7;
+    color: inherit
+}
+
+.CalendarDay__outside {
+    border: 0;
+    background: #fff;
+    color: #565a5c
+}
+
+.CalendarDay__blocked_minimum_nights {
+    background: #fff;
+    border: 1px solid #eceeee;
+    color: #cacccd
+}
+
+.CalendarDay__blocked_minimum_nights:active,
+.CalendarDay__blocked_minimum_nights:hover {
+    background: #fff;
+    color: #cacccd
+}
+
+.CalendarDay__highlighted_calendar {
+    background: #ffe8bc;
+    color: #565a5c
+}
+
+.CalendarDay__highlighted_calendar:active,
+.CalendarDay__highlighted_calendar:hover {
+    background: #ffce71;
+    color: #565a5c
+}
+
+.CalendarDay__selected_span {
+    background: #66e2da;
+    border: 1px solid #33dacd;
+    color: #fff
+}
+
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+    background: #33dacd;
+    border: 1px solid #33dacd;
+    color: #fff
+}
+
+.CalendarDay__last_in_range {
+    border-right: #00a699
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+    background: #304ffe;
+    border: 1px solid #00a699;
+    color: #fff
+}
+
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+    background: #b2f1ec;
+    border: 1px solid #80e8e0;
+    color: #007a87
+}
+
+.CalendarDay__hovered_span:active {
+    background: #80e8e0;
+    border: 1px solid #80e8e0;
+    color: #007a87
+}
+
+.CalendarDay__blocked_calendar,
+.CalendarDay__blocked_calendar:active,
+.CalendarDay__blocked_calendar:hover {
+    background: #cacccd;
+    border: 1px solid #cacccd;
+    color: #82888a
+}
+
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+    background: #e4e7e7;
+    border: 1px solid #fff;
+    color: #bac2c7
+}
+
+.DateRangePickerInput {
+    background-color: #fff;
+    display: inline-block
+}
+
+.DateRangePickerInput__disabled {
+    background: #f2f2f2
+}
+
+.DateRangePickerInput__withBorder {
+    border: 1px solid #cacccd
+}
+
+.DateRangePickerInput__rtl {
+    direction: rtl
+}
+
+.DateRangePickerInput__block {
+    display: block
+}
+
+.DateRangePickerInput__showClearDates {
+    padding-right: 30px
+}
+
+.DateRangePickerInput_arrow {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.DateRangePickerInput_arrow_svg {
+    vertical-align: middle;
+    fill: #565a5c;
+    height: 24px;
+    width: 24px
+}
+
+.DateRangePickerInput_arrow_svg__small {
+    height: 19px;
+    width: 19px
+}
+
+.DateRangePickerInput_clearDates {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px 0 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.DateRangePickerInput_clearDates__small {
+    padding: 6px
+}
+
+.DateRangePickerInput_clearDates_default:focus,
+.DateRangePickerInput_clearDates_default:hover {
+    background: #dbdbdb;
+    border-radius: 50%
+}
+
+.DateRangePickerInput_clearDates__hide {
+    visibility: hidden
+}
+
+.DateRangePickerInput_clearDates_svg {
+    fill: #82888a;
+    height: 12px;
+    width: 15px;
+    vertical-align: middle
+}
+
+.DateRangePickerInput_clearDates_svg__small {
+    height: 9px
+}
+
+.DateRangePickerInput_calendarIcon {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 0 5px 0 10px
+}
+
+.DateRangePickerInput_calendarIcon_svg {
+    fill: #82888a;
+    height: 15px;
+    width: 14px;
+    vertical-align: middle
+}
+
+.DateInput {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    vertical-align: middle
+}
+
+.DateInput__small {
+    width: 90px
+}
+
+.DateInput__disabled {
+    background: #f2f2f2;
+    color: #dbdbdb
+}
+
+.DateInput_input {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 24px;
+    color: #565a5c;
+    background-color: #fff;
+    width: 100%;
+    padding: 13px 12px 11px;
+    border: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid transparent;
+    border-left: 0
+}
+
+.DateInput_input__small {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 8px 6px
+}
+
+.DateInput_input__readOnly {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.DateInput_input__focused {
+    outline: 0;
+    background: #fff;
+    border: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #008489;
+    border-left: 0
+}
+
+.DateInput_input__disabled {
+    background: #f2f2f2;
+    font-style: italic
+}
+
+.DateInput_screenReaderMessage {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.DateInput_fang {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    left: 22px;
+    z-index: 2
+}
+
+.DateInput_fangShape {
+    fill: #fff
+}
+
+.DateInput_fangStroke {
+    stroke: #dbdbdb;
+    fill: transparent
+}
+
+._3Nn8QlghsBFM07qAG6IsRy {
+    position: relative;
+    top: 30px;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border: 3px solid #304ffe;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: _22PRTQ5oLJ-tlUYBQhByMR 1s infinite linear;
+    -o-animation: _22PRTQ5oLJ-tlUYBQhByMR 1s infinite linear;
+    -ms-animation: _22PRTQ5oLJ-tlUYBQhByMR 1s infinite linear;
+    -webkit-animation: _22PRTQ5oLJ-tlUYBQhByMR 1s infinite linear;
+    -moz-animation: _22PRTQ5oLJ-tlUYBQhByMR 1s infinite linear
+}
+
+@keyframes _22PRTQ5oLJ-tlUYBQhByMR {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+._3sz-Jorbvi2LDO38TpQcMl {
+    height: 100%
+}
+
+._3sz-Jorbvi2LDO38TpQcMl ._u4avc-WstuZP5sdbqIV1 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 80%;
+    margin: 0 10px 0 0;
+    border-radius: 20px
+}
+
+._3sz-Jorbvi2LDO38TpQcMl nav .fa {
+    font-size: 2em;
+    line-height: 20px
+}
+
+.gsYlqHuubB3bKiaXdybMG {
+    margin: 0;
+    height: 100%
+}
+
+::-webkit-input-placeholder {
+    color: #bdbdbd
+}
+
+:-moz-placeholder,
+::-moz-placeholder {
+    color: #bdbdbd;
+    opacity: 1
+}
+
+:-ms-input-placeholder {
+    color: #bdbdbd
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+select::-ms-expand {
+    display: none
+}
+
+html {
+    color: #222;
+    height: 100%;
+    font-weight: 100;
+    font-size: 1em;
+    font-family: Lato, Open Sans, Segoe UI, Helvetica, sans-serif;
+    line-height: 1.375;
+    -webkit-tap-highlight-color: transparent
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-weight: 400
+    }
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+textarea {
+    resize: vertical
+}
+
+.Up8slsD14rHw51F22CSBP {
+    padding-top: 50px
+}
+
+._3VSHiMzlgvtovMUnn99bn7 {
+    display: inline-block
+}
+
+._3VtgIRNIbcudVzjaLBAX8o {
+    margin: .2em 0;
+    background: #ccc;
+    color: #000;
+    padding: .2em 0
+}
+
+@media print {
+
+    *,
+    :after,
+    :before {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline
+    }
+
+    a[href]:after {
+        content: " ("attr(href) ")"
+    }
+
+    abbr[title]:after {
+        content: " ("attr(title) ")"
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: ""
+    }
+
+    blockquote,
+    pre {
+        border: 1px solid #999;
+        page-break-inside: avoid
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    img,
+    tr {
+        page-break-inside: avoid
+    }
+
+    img {
+        max-width: 100% !important
+    }
+
+    h2,
+    h3,
+    p {
+        orphans: 3;
+        widows: 3
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid
+    }
+}
+
+.Ene1OgtHIJZ1iod6TlghA {
+    padding-top: 50px !important
+}
+
+._2ezh4yxYWoLsI2rpqu6Wxm {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #f2f2f2;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    flex-direction: column
+}
+
+.hide-loader {
+    display: none !important
+}

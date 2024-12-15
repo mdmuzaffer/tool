@@ -1,0 +1,38 @@
+{
+    "name": "bgaze/bootstrap-form",
+    "description": "Bootstrap 4 forms builder for Laravel 5.8+",
+    "keywords": [
+        "laravel",
+        "form",
+        "bootstrap"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bgaze",
+            "email": "benjamin@bgaze.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": ">=5.8",
+        "illuminate/database": ">=5.8",
+        "laravelcollective/html": ">=5.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bgaze\\BootstrapForm\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bgaze\\BootstrapForm\\BootstrapFormServiceProvider"
+            ],
+            "aliases": {
+                "BF": "Bgaze\\BootstrapForm\\Support\\Facades\\BF"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
