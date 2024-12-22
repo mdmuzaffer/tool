@@ -309,6 +309,19 @@ Route::prefix('ap')->middleware('userAuthenticated')->group(function () {
 });
 
 
+// Webst Bangal
+Route::prefix('wb')->middleware('userAuthenticated')->group(function () {
+    Route::get('/list', 'User\UserController@listwb')->name('user.apply.list.wb');
+    Route::get('/booking', 'User\UserController@dashwb')->name('user.booking.wb');
+    Route::get('/print', 'User\UserController@printRecptwb')->name('user.Recpt.print.wb');
+    Route::get('/printt', 'User\UserController@printRecptatBookingtmwb')->name('user.Recpt.printatbooking.wb');
+    Route::post('/booking', 'User\UserController@BookingStoreWB')->name('user.booking.create.wb');
+    Route::get('dash', 'User\UserController@dashwb')->name('user.dashboard.wb');
+    Route::get('logoutwb', "Auth\UserLoginController@logoutwb")->name('user.logout.wb');
+    Route::view('bankselect.php', 'wb.bankselect')->name('user.bankselect.php.wb');
+    Route::view('UserDetails.php', 'wb.UserSelect')->name('user.UserDetails.php.wb');
+    Route::post('UserDetails.php', 'User\UserController@getLastReceiptForPrintwb')->name('user.UserDetails.php.post.wb');
+});
 
 /*Route::domain(getSubdomainHost('up'))->group(function () use ($cb) {
     // Route::get('info', function (Request $r) {

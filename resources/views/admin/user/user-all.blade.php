@@ -54,7 +54,6 @@ User
                                 <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @foreach ($user as $usr)
                             <tr id="{{$usr->id}}">
@@ -66,7 +65,7 @@ User
 
                                 {{-- <td>{{$job->id}}</td> --}}
                                 @php
-                                    $state = array("1"=>"Uttar Pradesh", "2"=>"Uttarakhand","3" => "Punjab","4" => "Haryana","5" => "Bihar","6" => "Gujarat","7" => "Maharashtra","8"=>"JHARKHAND","9"=>"Himachal Pradesh","10"=>'Karnatka',"11"=>'Rajsthan','12'=>'Madhya Pradesh','13'=>'Tamil Nadu','14'=>'Andhra Perdesh');
+                                    $state = array("1"=>"Uttar Pradesh", "2"=>"Uttarakhand","3" => "Punjab","4" => "Haryana","5" => "Bihar","6" => "Gujarat","7" => "Maharashtra","8"=>"JHARKHAND","9"=>"Himachal Pradesh","10"=>'Karnatka',"11"=>'Rajsthan','12'=>'Madhya Pradesh','13'=>'Tamil Nadu','14'=>'Andhra Perdesh','15'=>'West Bangal');
                                 @endphp
                                 <td>@if (($usr->state)!='')
                                    @if(intval($usr->state))

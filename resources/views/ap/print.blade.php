@@ -44,8 +44,8 @@
                 z-index: -1;
                 opacity: 0.5;
                 filter: alpha(opacity=70);
-                left: 780px;
-                top: 90px;
+                left: 500px;
+                top: 400px;
             }
         }
 
@@ -55,6 +55,7 @@
             opacity: 0.2;
             font-size: 20px;
             filter: alpha(opacity=50);
+            width: 50%;
         }
 
         .border-un {
@@ -68,13 +69,18 @@
         }
 
         .row-p {
-            font-size: 18px !important;
+            font-size: 16px !important;
         }
+
+        body{
+            color:#000;
+        }
+
     </style>
     <script>
         function textRepeat() {
                 var str = document.getElementById("regn_number").value + " / " + document.getElementById("payment_date").value + ", ";
-                document.getElementById("regn_date").innerHTML = str.repeat(24);
+                document.getElementById("regn_date").innerHTML = str.repeat(34);
             }
     </script>
 </head>
@@ -84,7 +90,7 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
 
 <body onLoad="window.print(), textRepeat()">
     <!-- ,textRepeat()     -->
-    <div class="watermark">
+    <div class="watermark" style="margin-top:250px;">
     <img id="j_idt10" src="{{asset('ap/Online Tax Payment Portal_files/mplogo1.jpeg?v='.uniqid())}}" alt=""> 
     </div>
     <form id="formPrint" name="formPrint" method="get"
@@ -249,7 +255,7 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
                         <tr>
                             <td colspan="4" class="row-p">
                                 <div>
-                                    <div class="ui-grid-responsive" style="font-size:25px;">
+                                    <div class="ui-grid-responsive" style="font-size:21px;">
                                         <table width="99%" border="0" cellspacing="0"
                                             style="border-top: 1px #000 solid;border-bottom: 1px #000 solid;border-left: none; border-right: none;"
                                             cellpadding="0">
@@ -359,7 +365,7 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
                                     style="text-transform:uppercase;">{{strtoupper(getIndianCurrencyInWordV2($rectdata->total_tax_amount+$rectdata->service_amount+$rectdata->user_service_charge+$rectdata->permit_fee+$rectdata->permit_endoresment_variation))}}
                                     ONLY</span>) </td>
                         </tr>
-                        <tr valign="top">
+                        <tr valign="top" style="font-size:18px;">
                             <td colspan="3"><span style="font-style: italic;"><b>Note :</b> <br>
                             <b>Terms and Conditions:</b><br>
                                 

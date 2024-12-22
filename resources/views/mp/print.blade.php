@@ -84,6 +84,8 @@
         $tolltax=$this->apimodel->listRecord('tolltax',array('id'=>$result[0]['tid']));
         $state=$this->apimodel->listRecord('m_state',array('id'=>20));*/
         ?>
+
+
         <div class="row" style="width:1000px !important; height:;border:0px solid black;z-index:1;">
             <div class="col-sm-12" style="overflow-y:hidden;padding:10px;text-align:;height:447px !important;background-image: url('');background-repeat: no-repeat;background-attachment:;background-size: cover;">
                 <?php

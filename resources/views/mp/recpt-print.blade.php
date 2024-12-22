@@ -89,10 +89,11 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
 
 <body onLoad="window.print(), textRepeat()">
     <!-- ,textRepeat()     -->
-    <div class="watermark">
-        <!--            &lt;p style="font-size:100px;"&gt;Sample&lt;/p&gt; <img id="j_idt10"
-            src="{{asset('Online Tax Payment Portal_files/UP-LOGO.png?v='.uniqid())}}" alt=""> -->
+    
+    <div class="watermark" style="margin-top:10px;">
+        <img id="j_idt10" src="{{asset('/mplog.jpeg?v='.uniqid())}}" alt="" width="200px" height="200px"> 
     </div>
+   
     <form id="formPrint" name="formPrint" method="get"
         action="{{ route('user.apply.list') }}"
         enctype="application/x-www-form-urlencoded">

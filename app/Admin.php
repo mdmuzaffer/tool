@@ -58,7 +58,8 @@ class Admin extends Authenticatable
 		['id' => 11, 'code' => 'raj', 'subdomain_prefix' => 'raj', 'receipt_prefix' => 'RJT', 'name' => 'Rajsthan',],
         ['id' => 12, 'code' => 'MP', 'subdomain_prefix' => 'mp', 'receipt_prefix' => 'MPT', 'name' => 'Madhya Pradesh',],
         ['id' => 13, 'code' => 'TM', 'subdomain_prefix' => 'tm', 'receipt_prefix' => 'TMT', 'name' => 'Tamil Nadu'],
-        ['id' => 14, 'code' => 'AP', 'subdomain_prefix' => 'ap', 'receipt_prefix' => 'APT', 'name' => 'Andhra Pradesh']
+        ['id' => 14, 'code' => 'AP', 'subdomain_prefix' => 'ap', 'receipt_prefix' => 'APT', 'name' => 'Andhra Pradesh'],
+        ['id' => 15, 'code' => 'WB', 'subdomain_prefix' => 'wb', 'receipt_prefix' => 'WBT', 'name' => 'West Bangal']
     ];
     public static function getServiceStates($objectify = true)
     {

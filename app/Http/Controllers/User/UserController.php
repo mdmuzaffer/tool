@@ -2140,4 +2140,93 @@ class UserController extends Controller
     }
 
 
+
+
+       // West Bangal
+
+       public function listwb()
+       {
+           $u = Auth::guard('user')->user();
+           $data = ['applyrecp' => $u->PaymentReceipts()->get(),'total_amunt'=> ($u->Total_Tax_Amount + $u->Return_Amont) ];
+           return view('wb.list', $data);
+       }
+   
+       public function dashwb(Request $request){
+           $u = Auth::guard('user')->user();
+   
+           $data = ['recpt' => (object)(PaymentsReceipt::getByVehicleNo($request->get('vehicleno', false), Session::get('state_id')))];
+           if ($request->get('vehicleno', false) && $data['recpt']->vehicleno == "") {
+               $data['recpt']->vehicleno = $request->get('vehicleno', false);
+           }
+           return view('wb.booking', $data);
+       }
+   
+       public function printRecptwb(Request $request) {
+           $data = ['rectdata' => PaymentsReceipt::getByReceiptNo($request->get('rec', false)) ];
+           return view('wb.print', $data);
+       }
+   
+   
+       public function printRecptatBookingtmwb(Request $request){
+           $data = ['rectdata' => PaymentsReceipt::getByReceiptNo($request->get('rec', false)) ];
+           return view('wb.print', $data);
+       }
+   
+   
+       public function BookingStoreWB(Request $request)
+       {
+           $u = Auth::guard('user')->user();
+           $validated = $request->validate([
+               'vehicleno' => 'required|string',
+               'chassisno' => 'required|string',
+               'ownername' => 'required|string',
+               'from_state' => 'required|string',
+               'VehicleType' => 'required|string',
+               'VehicleClass' => 'required|string',
+               'seating_c' => 'required|string',
+               'txt_sleeper_cap' => 'string|nullable',
+               'ServiceType' => 'required|string',
+               'TaxMode' => 'required|string',
+               'border_entry' => 'required|string',
+               'tax_from' => 'required|string',
+               'tax_upto' => 'required|string',
+               'PermitType' => 'string|nullable',
+               'permit_upto' => 'string|nullable',
+               'permit_no' => 'string|nullable',
+               'total_tax_amount' => 'required|string',
+               'mobile' => 'required|string'
+   
+           ]);
+           // 'capacity_unit',
+           // 'admin_id', 'user_id', 'sms_sent', 'is_archived', 'created_at', 'updated_at'
+           $validated['capacity_unit'] = "GOODS VEHICLE" == $validated['VehicleType'] ? "KG" : "";
+           $validated['user_id'] = $u->id;
+           $validated['admin_id'] = $u->admin_id;
+           $validated['receipts_state'] = Session::get('state_id');
+           PaymentsReceipt::create($validated);
+           return redirect()->route('user.bankselect.php.wb');
+       }
+   
+   
+           public function getLastReceiptForPrintwb(Request $request)
+       {
+           $u = Auth::guard('user')->user();
+           $v = $request->validate([
+               'txtUserName' => 'required',
+               'txtPassword' => 'required',
+           ]);
+           $x = config('app.fake.print.user');
+           if ($v['txtUserName'] == $x['username'] && $v['txtPassword'] == $x['password']) {
+               $last = $u->LastReceipt();
+               if ($last) {
+                   return redirect()->route('user.Recpt.printatbooking.wb', ['rec' => $last->receipt_no]);
+               } else {
+                   return redirect()->route('user.dashboard.wb');
+               }
+           } else {
+               return redirect()->back()->withErrors(['e1' => 'Username and Password did not match.']);
+           }
+       }
+
+
 }

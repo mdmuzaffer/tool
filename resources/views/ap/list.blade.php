@@ -79,7 +79,7 @@
                             <tr>
                                 <td style="padding: 10px;">
                                     <a target="_blank"
-                                        href="{{ route('user.Recpt.print.ka',['rec'=>$rec->receipt_no]) }}">{{$rec->receipt_no_gen}}</a>
+                                        href="{{ route('user.Recpt.print.ap',['rec'=>$rec->receipt_no]) }}">{{$rec->receipt_no_gen}}</a>
                                         {{-- <a target="_blank"
                                             href="{{$rec->universal_link}}">p2</a> --}}
                                 </td>
