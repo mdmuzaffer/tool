@@ -24,7 +24,7 @@ class PaymentsReceipt extends Model
         'ownertype','txt_floor_area','ins_upto','tax_validity','infra_cess','permit_fee',
         'permit_endoresment_variation','checkpost_name','user_service_charge','cgst','sgst',
         'infra_cess','permit_fee_mp',
-        'name_of_goods','route','VehicleCategory'
+        'name_of_goods','route','VehicleCategory','periods_no','gross_combination','standing_capacity'
     ];
 
     protected $casts = [

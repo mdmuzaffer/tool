@@ -170,7 +170,7 @@
                                         <label class="field-label resp-label-section">
                                             <h3 class="top-space">Select Visiting State Name</h3>
                                         </label>
-                                        <select class="form-control" name="state">
+                                        <select class="form-control" name="state" id="mySelect">
                                             <option value="">Please select State</option>
                                             @if(@count($state) > 0)
                                                 @foreach($state as $states)
@@ -183,7 +183,7 @@
                                         <label class="field-label resp-label-section">
                                             <h3 class="top-space">Service Name</h3>
                                         </label>
-                                        <select class="form-control" name="service">
+                                        <select class="form-control" name="service" id="serviceSelect">
                                             <option value="">Please select Service Name</option>
                                             <option value="other">Other</option>
                                         </select>
@@ -380,5 +380,24 @@
     <script id="payment_dialog6_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","process6",{id:"payment_dialog6",resizable:false,modal:true,width:"600",height:"500",closeOnEscape:true});});</script>
     </div><div id="j_idt187" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt188" src="{{ asset('newAssets/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images')}}" alt="" /></div>
     <script id="j_idt187_s" type="text/javascript">$(function(){PrimeFaces.cw("BlockUI","masterLayoutVar",{id:"j_idt187",block:"master_Layout_form"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="1168780093040411243:-452930263442976215" autocomplete="off" />
-</form></body>
+</form>
+
+<script>
+$(document).ready(function() {
+  $('#mySelect').change(function() {
+    let selectedValue = $(this).val(); 
+        if(selectedValue =='12'){
+            if ($("#serviceSelect option[value='Heavy_Loding']").length === 0) {
+                $('#serviceSelect').append('<option value="Heavy_Loding">Heavy Loding</option>');
+            }
+        }else{
+            $("#serviceSelect option[value='Heavy_Loding']").remove();
+        }
+  });
+});
+
+</script>
+
+
+</body>
 </html>

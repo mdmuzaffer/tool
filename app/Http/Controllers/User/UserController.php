@@ -35,6 +35,11 @@ class UserController extends Controller
         }
         $input = $request->all();
 
+        
+        // echo "<pre>";
+        // print_r($input);
+        // die;
+
         if($input){
             $validatedData = $request->validate([
                 'state' => 'required',
@@ -45,6 +50,10 @@ class UserController extends Controller
                 Session::put('state_id',$request->state);
 
                 $state = state::findOrFail((int)$request->state);
+
+                if ($request->has('service') && $request->input('service') === 'Heavy_Loding') {
+                        return redirect()->route('user.dashboard.'.$state->subdomain_prefix.'.hl');
+                }
 
                 return redirect()->route('user.dashboard.'.$state->subdomain_prefix);
             } catch (\Exception $e) {
@@ -399,7 +408,22 @@ class UserController extends Controller
              $data['recpt']->vehicleno = $request->get('vehicleno', false);
          }
          return view('mp.bookingmp', $data);
-     }
+    }
+
+    public function dashmphl(Request $request)
+    {
+        $u = Auth::guard('user')->user();
+        $data = [
+            'u'=>$u,
+            'recpt' => (object)(PaymentsReceipt::getByVehicleNo($request->get('vehicleno', false), Session::get('state_id')))
+
+        ];
+        // dd($data);
+        if ($request->get('vehicleno', false) && $data['recpt']->vehicleno == "") {
+            $data['recpt']->vehicleno = $request->get('vehicleno', false);
+        }
+        return view('mp.bookingmphl', $data);
+    }
 
     // all booking list
     public function allBooking(){
@@ -1469,6 +1493,11 @@ class UserController extends Controller
     {
         $u = Auth::guard('user')->user();
         
+        // $data = $request->all();
+        // echo "<pre>";
+        // print_r($data);
+        // die;
+
         $validated = $request->validate([
             'vehicleno' => 'required|string',
             'chassisno' => 'required|string',
@@ -1491,7 +1520,14 @@ class UserController extends Controller
             'user_service_charge' => 'required',
             'cgst' => 'required',
             'sgst' => 'required',
-            'permit_fee_mp'=>'required'
+            'permit_fee_mp'=>'required',
+            'gross_combination'=> 'string',
+            'standing_capacity'=> 'string',
+            'periods_no'=> 'string',
+            'fitdate'=> 'string',
+            'ins_upto'=> 'string',
+            'tax_validity'=> 'string',
+            'green_tax'=> 'string',
 
         ]);
 

@@ -249,6 +249,7 @@ Route::prefix('mp')->middleware('userAuthenticated')->group(function () {
     Route::post('/booking', 'User\UserController@BookingStoreMP')->name('user.booking.create.mp');
 
     Route::get('dash', 'User\UserController@dashmp')->name('user.dashboard.mp');
+    Route::get('dashl', 'User\UserController@dashmphl')->name('user.dashboard.mp.hl');
     Route::get('logoutmp', "Auth\UserLoginController@logoutmp")->name('user.logout.mp');
     Route::view('bankselect.php', 'mp.bankselect')->name('user.bankselect.php.mp');
     Route::view('UserDetails.php', 'mp.UserSelect')->name('user.UserDetails.php.mp');
