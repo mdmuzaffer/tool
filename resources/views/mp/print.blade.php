@@ -95,6 +95,7 @@
                 ?>
             </div>
         </div>
+        
         <table cellpadding="0" cellspacing="0" border="0" style="position:absolute;top:0px !important;z-index:3;width:1000px!important;background:transparent;  border:1px solid gray;background-image: url('{{asset('mp/assets/images/mp_bg.png?v='.uniqid())}}');background-repeat: no-repeat;background-attachment:;background-size:100%;min-height:480px;">
             <tr style="border-bottom:0px solid black;">
                 <td class="txt1" style="border:0px solid black;vertical-align:middle;text-align:center;">

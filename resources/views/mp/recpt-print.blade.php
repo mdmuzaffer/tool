@@ -368,8 +368,163 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
                                     style="text-transform:uppercase;">{{strtoupper(getIndianCurrencyInWordV2($gransTotal))}}
                                     ONLY</span>) </td>
                         </tr>
+
+                        </tbody>
+                    </table>
+                <br>
+                <br>
+
+                @php 
+
+                if(!empty($rectdata->mp_hl)){
+                @endphp
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>               
+                <div class="container">
+                    <div class="ui-grid ui-grid-responsive">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-12 center-position contents-Space">
+                                <h1 class="header-main">Transport Department MADHYA PRADESH</span></h1>
+                                <h5>DTO BURHANPUR</h5>
+                                <h5>FORM MPMVR-51 (T.P.)</h5>
+                                <h5>[See Rule 73(1)(d)]</h5>
+                                <h5>TEMP. PERMIT No.: {{$rectdata->receipt_no_gen}}</h5>
+                                <h5>B: 87(1)(B)- WILL BE GRANTED FOR SHORT PERIOD (FOR GOODS VEHICLE).</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
                         <tr valign="top">
-                            <td colspan="3"><span style="font-style: italic;">Note : 1) This is a computer generated
+                            <td colspan="2">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>1. Name of Permit Holder</label></td>
+                                            <td width="50%" class="row-p"><span id="regn_no"
+                                                    style="font-weight: bold;">: {{strtoupper($rectdata->ownername)}}</span> </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>2. Routes or Area</label></td>
+                                            <td width="50%" class="row-p">: Madhya Pradesh State</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>3. (i) Type of vehicle</label></td>
+                                            <td width="50%" class="row-p">:{{$rectdata->VehicleClass}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>&nbsp;&nbsp; (ii) Registration Mark</label></td>
+                                            <td width="50%" class="row-p">: MH28BB0015 </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>&nbsp;&nbsp; (iii) Seating Capacity</label></td>
+                                            <td width="50%" class="row-p">: {{$rectdata->seating_c}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>&nbsp;&nbsp; (iv) Gross Vehicle Weight</label></td>
+                                            <td width="50%" class="row-p">: {{$rectdata->gross_combination}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>4. Gross Vehicle Weight</label></td>
+                                            <td width="50%" class="row-p">: 87(1)(B)- Will be granted for short period (For
+                                            Goods Vehicle)</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label>5. Date of expiry</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->tax_upto}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="80%" class="row-p"><label>6. Number and Description of Permit already held :</label></td>
+                                            <td width="20%" class="row-p">: </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp;(a). Permit no.</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->permit_no}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp;(b). Permit Type</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->PermitType}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp; (c). Permit Validity</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->permit_upto}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="80%" class="row-p"><label>7. Other Details Of Vehicle :</label></td>
+                                            <td width="20%" class="row-p">: </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp;(a). Fitness Validity.</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->fitdate}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp;(b). Insurance Validity</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->ins_upto}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp; (c). Road Tax Validity</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->green_tax}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="50%" class="row-p"><label> &nbsp;&nbsp; (d). PUCC Validity</label></td>
+                                            <td width="50%" class="row-p">:  {{$rectdata->tax_validity}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br><br><br><br>
+                
+                <table>
+                    <tbody>
+
+                        <tr valign="top">
+                            <td colspan="3">
+                            <span style="font-style: italic;">Note : 1) This is a computer generated printout and no signature is required.</span>
+                                    <br>
+                                <span style="font-style: italic;">2) Incorrect mentioning of vehicle data may lead to tax evasion and defaulter shall be liable for penal action.</span><br>
+                                <span style="font-style: italic;"><br>
+                                3) You are not allowed to make any intrastate trip within Madhya Pradesh and this permit is valid for one round trip only.
+                                </span>
+                                <span style="font-style: italic;"><br>
+                                4) The Temporary Permit should be accompanied by the Checkpost e-Receipt with QR code.
+                                </span>
+                                <span style="font-style: italic;"><br>
+                                5) This permit does not empower the vehicle operator to operate this vehicle on route(s) / area restricted by State Government or District administration or any competent authority.<br> You will also receive the payment confirmation message.
+                                </span>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+
+
+                @php } 
+                if(empty($rectdata->mp_hl)){
+                @endphp
+
+                <table>
+                    <tbody>
+
+                        <tr valign="top">
+                            <td colspan="3"><span style="font-style: italic;">Note : 1)This is a computer generated
                                     printout and no signature is required.</span><br><span
                                     style="font-style: italic;">2) Incorrect mentioning of vehicle class or seating
                                     capacity may lead to tax evasion and defaulter shall be liable for penal
@@ -387,6 +542,8 @@ $timePaid = strtoupper($rectdata->created_at->format('d-M-Y h:i a'));
 
                     </tbody>
                 </table>
+                @php } @endphp
+
                 <div style="float: right;">
                 </div>
             </div>

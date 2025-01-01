@@ -1528,6 +1528,7 @@ class UserController extends Controller
             'ins_upto'=> 'string',
             'tax_validity'=> 'string',
             'green_tax'=> 'string',
+            'mp_hl' => 'string'
 
         ]);
 

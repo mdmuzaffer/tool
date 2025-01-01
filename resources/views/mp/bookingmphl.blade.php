@@ -168,6 +168,7 @@ if (tax_upto.value == "")
 
     @csrf
     <input type="hidden" name="master_Layout_form" value="master_Layout_form">
+    <input type="hidden" name="mp_hl" value="mp_hl">
 
             <div>
                 <!--                &lt;ui:include src="/headerBeforeLogin.xhtml"/&gt;-->
@@ -188,8 +189,6 @@ if (tax_upto.value == "")
                             <div class="ui-grid-col-2">
                                 <div class="right_head_w">
                                     <div>
-
-
                                         <div style="float: right;vertical-align: top;"></div>
                                     </div>
                                 </div>
@@ -202,7 +201,7 @@ if (tax_upto.value == "")
                        <a href="{{route('user.booking')}}" style="color:#FFFFFF; padding:5px;">Home</a> | <a style="color:#FFFFFF; padding:5px;" href="{{route('user.apply.list.mp')}}">Print Vehicle receipt</a> | <a
                        style="color:#FFFFFF; padding:5px;" href="{{route('select-state')}}">Change State</a> |  <a
                        style="color:#FFFFFF; padding:5px;" href="{{route('all-booking')}}">All Booking</a>  | <a style="color:#FFFFFF; padding:5px;" href="{{route('user.logout')}}">Logout</a>
-                    </div>
+                </div>
 
 
                 <div class="main_news_w">
